@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import Clock from "./clock";
 
 function Navbar(){
   return ( 
 <div className="navbar bg-base-100 text-white">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl"><Link to='/home'>What is bro cooking</Link> </a>
+    <Link className="btn btn-ghost text-xl"  to='/home'>What is bro cooking</Link> 
   </div>
   <div className="flex-none">
+    
+       <Clock></Clock> 
     <ul className="menu menu-horizontal px-1">
       <li><a>ola</a></li>
       <li>
