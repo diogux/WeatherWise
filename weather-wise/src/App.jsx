@@ -1,23 +1,17 @@
-import './App.css'
-import {Button} from "@/components/ui/button" 
-import Navbar from './components/navbar'
-import Footer from './components/footer'
-import Search from './components/search'
+import Home from './pages/Home'
+import Health from './pages/Health'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-
   return (
-    <>
-<div className="flex flex-col min-h-screen">
-      <Navbar></Navbar>
-            <div className="mx-auto w-full flex-grow p-10 ">
-              <Search></Search>
-            </div>
-            <Footer />
-        </div>
-
-    </>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/health' element={<Health />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
