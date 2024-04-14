@@ -1,0 +1,19 @@
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-text {
+  display: inline-block;
+  animation: ticker-animation 20s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes ticker-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+  
