@@ -8,13 +8,13 @@ import Rain from '../components/rain';
 
 function Home() {
   return (
-    <div className="home flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <Rain />
       <div className="mx-auto flex-grow p-10 flex flex-col items-center justify-center text-center">
-      <h2 className="text-4xl font-bold text-white">Aveiro</h2>
-        <h2 className="text-8xl font-bold mb-2 text-white">19°</h2>
-        <h2 className="text-2xl font-bold mb-6 text-white">Mostly Cloudy</h2>
+      <h2 className="text-4xl font-bold text-grey">Aveiro</h2>
+        <h2 className="text-8xl font-bold mb-2 text-grey">19°</h2>
+        <h2 className="text-2xl font-bold mb-6 text-grey">Mostly Cloudy</h2>
         <Search />
       </div>
       <div className="flex justify-around mb-40 card-container">
@@ -25,13 +25,11 @@ function Home() {
             imageSrc="https://cdn-icons-png.flaticon.com/128/1163/1163661.png"
           />
         </Link>
-        <Link to="/daily-advice">
           <Card
             name="Daily Advice"
-            description="Daily advice for your activities"
+            description="Advice and tips for your activities"
             imageSrc="https://cdn-icons-png.flaticon.com/128/834/834768.png"
           />
-        </Link>
         <Link to="/health">
           <Card
             name="Health"
@@ -39,11 +37,11 @@ function Home() {
             imageSrc="https://cdn-icons-png.flaticon.com/128/3004/3004458.png"
           />
         </Link>
-        <Link to="/travel">
+        <Link to="/crops">
           <Card
-            name="Travel"
-            description="Travel recommendations and tips"
-            imageSrc="https://cdn-icons-png.flaticon.com/128/870/870194.png"
+            name="Crops"
+            description="Recommendations for your garden"
+            imageSrc="https://cdn-icons-png.flaticon.com/128/3658/3658881.png"
           />
         </Link>
       </div>

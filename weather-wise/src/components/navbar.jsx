@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPencil, faCog, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { faPencil, faCog, faTriangleExclamation, faFlag } from '@fortawesome/free-solid-svg-icons';
 import Clock from './clock';
 import './navbar.css';
 
 function Navbar() {
   return ( 
-    <div className="navbar bg-base-100 text-white w-full">
+    <div className="navbar bg-base-100 text-white">
       <div className="flex-1">
         <Link className="btn btn-ghost text-xl" to='/home'>WeatherWise</Link> 
       </div>
@@ -16,15 +16,27 @@ function Navbar() {
       </div>
       <div className="flex-none">
         <Clock />
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-4">
           <li><a><FontAwesomeIcon icon={faPencil} /></a></li>
+          <li className='px-2'>
+            <details>
+              <summary>
+                <FontAwesomeIcon icon={faFlag} />
+              </summary>
+              <ul className="bg-base-100 rounded-t-none">
+                <li><a>EN</a></li>
+                <li><a>PT</a></li>
+                <li><a>FR</a></li>
+              </ul>
+            </details>
+          </li>
           <li>
             <details>
               <summary>
                 <FontAwesomeIcon icon={faCog} />
               </summary>
-              <ul className="p-3 bg-base-100 rounded-t-none">
-                <li><Link to='/health'>Health</Link></li>
+              <ul className="p-1 bg-base-100 rounded-t-none">
+                <li><a>Help</a></li>
                 <li><a>FAQ</a></li>
                 <li><a>About us</a></li>
               </ul>
