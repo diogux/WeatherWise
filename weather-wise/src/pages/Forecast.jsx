@@ -2,7 +2,7 @@ import '../App.css'
 import {Button} from "@/components/ui/button" 
 import Navbar from '../components/navbar'
 
-function Home() {
+function Forecast() {
 
   return (
     <>
@@ -17,5 +17,5 @@ function Home() {
   );
 }
 
-export default Home
+export default Forecast
 

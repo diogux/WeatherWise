@@ -4,7 +4,7 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Search from '../components/search'
 
-function Home() {
+function Health() {
 
   return (
     <>
@@ -19,5 +19,5 @@ function Home() {
   );
 }
 
-export default Home
+export default Health
 
