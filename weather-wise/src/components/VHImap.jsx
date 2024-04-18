@@ -19,21 +19,22 @@ const VHImap = () => {
   // Função para mapear o valor de VHI para uma cor
   const mapVHIToColor = (vhi) => {
     if (vhi < 15) {
-      return '#ff0000'; // Vermelho
+      return '#8B0000'; // Maroon
     } else if (vhi < 30) {
-      return '#ff8000'; // Laranja
+      return '#A52A2A'; // Brown
     } else if (vhi < 45) {
-      return '#ffff00'; // Amarelo
+      return '#FF0000'; // Red
     } else if (vhi < 60) {
-      return '#80ff00'; // Verde claro
+      return '#FFA500'; // Orange
     } else if (vhi < 75) {
-      return '#00ff80'; // Verde
+      return '#FFFF00'; // Yellow
     } else if (vhi < 90) {
-      return '#00ffff'; // Azul claro
+      return '#ADFF2F'; // GreenYellow
     } else {
-      return '#0080ff'; // Azul
+      return '#008000'; // Green
     }
   };
+  
 
   // Função para definir a cor de preenchimento de cada distrito
   const styleFunction = (feature) => {
@@ -66,7 +67,7 @@ const VHImap = () => {
       <div>
         <MapContainer
           center={[39.3999, -8.2245]} // Coordinates for Portugal
-          zoom={7}
+          zoom={6.5}
           style={{height: '70vh' }}
           dragging={true}
         >

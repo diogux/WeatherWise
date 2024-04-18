@@ -15,20 +15,20 @@ function Crops() {
           <h2 className="text-4xl font-bold text-gray-800">Crops</h2>
         </div>
         <div className="flex">
-          <div className="w-1/2" style={{paddingRight: '20px'}}>
-            <div className="border border-gray-300 rounded-md overflow-hidden">
-              <div className="legend">
-                <div className="legend-item" style={{ backgroundColor: '#ff0000', justifyContent:'center' }}>0-14</div>
-                <div className="legend-item" style={{ backgroundColor: '#ff8000' }}>15-29</div>
-                <div className="legend-item" style={{ backgroundColor: '#ffff00' }}>30-44</div>
-                <div className="legend-item" style={{ backgroundColor: '#80ff00' }}>45-59</div>
-                <div className="legend-item" style={{ backgroundColor: '#00ff80' }}>60-74</div>
-                <div className="legend-item" style={{ backgroundColor: '#00ffff' }}>75-89</div>
-                <div className="legend-item" style={{ backgroundColor: '#0080ff' }}>90-100</div>
+            <div className="w-1/4" style={{paddingRight: '20px'}}>
+              <div className="border border-gray-300 rounded-md overflow-hidden">
+                <div className="legend">
+                  <div className="legend-item" style={{ backgroundColor: '#008000' }}>90-100</div>
+                  <div className="legend-item" style={{ backgroundColor: '#ADFF2F' }}>75-89</div>
+                  <div className="legend-item" style={{ backgroundColor: '#FFFF00' }}>60-74</div>
+                  <div className="legend-item" style={{ backgroundColor: '#FFA500' }}>45-59</div>
+                  <div className="legend-item" style={{ backgroundColor: '#FF0000' }}>30-44</div>
+                  <div className="legend-item" style={{ backgroundColor: '#A52A2A' }}>15-29</div>
+                  <div className="legend-item" style={{ backgroundColor: '#8B0000' }}>0-14</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-1/2">
+          <div className="w-1/3">
             <VHImap />
           </div>
         </div>
