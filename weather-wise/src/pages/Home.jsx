@@ -5,6 +5,8 @@ import Navbar from '../components/navbar';
 import Search from '../components/search';
 import Card from '../components/card';
 import Rain from '../components/rain';
+import Card_Modal from '../components/card_modal';
+import Advice_Modal from '../components/advice_modal';
 
 function Home() {
   return (
@@ -25,11 +27,17 @@ function Home() {
             imageSrc="https://cdn-icons-png.flaticon.com/128/1163/1163661.png"
           />
         </Link>
-          <Card
+
+<Advice_Modal></Advice_Modal>
+
+
+          <Card_Modal
             name="Daily Advice"
             description="Advice and tips for your activities"
             imageSrc="https://cdn-icons-png.flaticon.com/128/834/834768.png"
           />
+        
+
         <Link to="/health">
           <Card
             name="Health"
