@@ -15,9 +15,9 @@ const Modal = () => {
       <dialog id="my_modal_2" className="modal text-white">
 
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Daily Advice! (Press ESC or click outside to close)</h3>
-          <p className="py-4">Mekie</p>
-          <b>Hoje ta mega sol, cuidado</b>
+          <h3 className="font-bold text-lg">Daily Advice</h3>
+          <p className="py-4">Expect rainy weather today.</p>
+          <b>It might be best to bring an umbrella.</b>
         </div>
 
         <form method="dialog" className="modal-backdrop">
