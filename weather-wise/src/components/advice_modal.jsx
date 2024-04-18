@@ -12,7 +12,6 @@ const Modal = () => {
   };
 
   return (
-    <div>
       <dialog id="my_modal_2" className="modal text-white">
 
         <div className="modal-box">
@@ -25,7 +24,6 @@ const Modal = () => {
           <button onClick={closeModal}>Close</button>
         </form>
       </dialog>
-    </div>
   );
 };
 
