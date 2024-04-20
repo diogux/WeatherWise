@@ -1,0 +1,29 @@
+.weekly-forecast-table {
+    /*background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  .weekly-forecast-table table {
+    width: 100%;
+  }
+  
+  .weekly-forecast-table td {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .weekly-forecast-table .day {
+    font-weight: bold;
+  }
+  
+  .weekly-forecast-table .icon {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .weekly-forecast-table .temperature {
+    font-size: 14px;
+  }
+  

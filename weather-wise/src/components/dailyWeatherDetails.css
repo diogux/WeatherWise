@@ -1,0 +1,20 @@
+.daily-weather-details {
+    /*background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  .daily-weather-details table {
+    width: 100%;
+  }
+  
+  .daily-weather-details td {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .daily-weather-details strong {
+    font-weight: bold;
+  }
+  
