@@ -28,8 +28,7 @@ function Home() {
           />
         </Link>
 
-<Advice_Modal></Advice_Modal>
-
+        <Advice_Modal></Advice_Modal>
 
           <Card_Modal
             name="Daily Advice"
