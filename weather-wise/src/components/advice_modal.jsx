@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRain} from '@fortawesome/free-solid-svg-icons';
+import { faCloudRain} from '@fortawesome/free-solid-svg-icons';
 
 const Modal = () => {
   const openModal = () => {
@@ -16,9 +16,9 @@ const Modal = () => {
   return (
       <dialog id="my_modal_2" className="modal text-white">
 
-        <div className="modal-box">
+        <div className="modal-box bg-black/80">
           <h3 className="font-bold text-lg">Daily Advice</h3>
-          <p className="py-4">Expect rainy weather today.</p><FontAwesomeIcon icon={faRain}></FontAwesomeIcon>
+          <p className="py-4">Expect rainy weather today <FontAwesomeIcon icon={faCloudRain}></FontAwesomeIcon></p>
           <b>It might be best to bring an umbrella!</b>
         </div>
 

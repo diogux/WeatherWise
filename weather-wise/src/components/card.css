@@ -9,7 +9,7 @@
   height: 285px; /* Adjust the height as needed */
   border-radius: 10px;
   padding-top: 10px;
-  background-color: rgba(255, 255, 255, 0.4); /* Slightly transparent white */
+  /*background-color: rgba(255, 255, 255, 0.4); /* Slightly transparent white */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   overflow: hidden; /* Ensure content does not overflow */

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 import {
   NavigationMenu,
@@ -12,17 +12,16 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-function language_menu () {
+function settings_menu () {
   return (
   <NavigationMenu>
   <NavigationMenuList>
     <NavigationMenuItem>
-      <NavigationMenuTrigger><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon></NavigationMenuTrigger>
+      <NavigationMenuTrigger><FontAwesomeIcon icon={faCog}></FontAwesomeIcon></NavigationMenuTrigger>
       <NavigationMenuContent>
-        <Link className={navigationMenuTriggerStyle()} >EN</Link> 
-        <Link className={navigationMenuTriggerStyle()} >PT</Link>
-        <Link className={navigationMenuTriggerStyle()} >FR</Link>
-        <Link className={navigationMenuTriggerStyle()} >ES</Link>
+        <Link className={navigationMenuTriggerStyle()} >Help</Link> 
+        <Link className={navigationMenuTriggerStyle()} >Contacts</Link>
+        <Link className={navigationMenuTriggerStyle()} >About Us</Link>
       </NavigationMenuContent>
     </NavigationMenuItem>
   </NavigationMenuList>
@@ -31,5 +30,5 @@ function language_menu () {
   );
 }   
 
-export default language_menu;
+export default settings_menu;
 

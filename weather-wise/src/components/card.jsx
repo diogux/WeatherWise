@@ -3,7 +3,7 @@ import './card.css';
 
 function Card({ name, description, imageSrc }) {
   return (
-    <div className="card w-70 h-70 bg-base-50 shadow-xl">
+    <div className="card w-70 h-70 bg-white/30 shadow-xl">
       <figure><img src={imageSrc} alt={name} /></figure>
       <div className="card-body">
         <h2 className="card-title text-white">{name}</h2>
