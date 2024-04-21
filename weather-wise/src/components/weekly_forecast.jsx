@@ -5,8 +5,8 @@ const WeeklyWeatherForecast = () => {
   // Sample data for the weekly forecast
   const forecastData = [
     { date: 21, day: 'Mon', icon: '☀️', high: 25, low: 18 },
-    { date: 22, day: 'Tue', icon: '⛅', high: 23, low: 17 },
-    { date: 23, day: 'Wed', icon: '🌦️', high: 22, low: 16 },
+    { date: 22, day: 'Tue', icon: '🌦️', high: 23, low: 17 },
+    { date: 23, day: 'Wed', icon: '⛅', high: 22, low: 16 },
     { date: 24, day: 'Thu', icon: '🌧️', high: 20, low: 15 },
     { date: 25, day: 'Fri', icon: '⛈️', high: 19, low: 14 },
     { date: 26, day: 'Sat', icon: '🌧️', high: 18, low: 13 },

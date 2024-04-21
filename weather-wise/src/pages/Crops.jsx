@@ -1,7 +1,5 @@
 import '../App.css';
-import { Button } from "@/components/ui/button"; 
 import Navbar from '../components/navbar';
-import Footer from '../components/footer';
 import Search from '../components/search';
 import VHImap from '../components/VHImap';
 
@@ -14,10 +12,10 @@ function Crops() {
         <div className="py-10">
           <h2 className="text-4xl font-bold text-gray-800">Crops</h2>
         </div>
-        <div className="mb-4 flex justify-center">
-              <Search/>
+        <div className="mb-4 flex justify-end mx-20"> {/* Aligns search to the right */}
+          <Search placeholder="Search for a district" />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-between"> {/* Aligns legend and map */}
           <div className="w-1/4" style={{ paddingRight: '20px' }}>
             <div className="border border-gray-300 rounded-md overflow-hidden">
               <div className="legend">
@@ -31,7 +29,7 @@ function Crops() {
               </div>
             </div>
           </div>
-          <div className="w-1/3 float: right">
+          <div className="w-1/3"> {/* Aligns map to the right */}
             <VHImap />
           </div>
         </div>
@@ -40,5 +38,4 @@ function Crops() {
   );
 }
 
-export default Crops
-
+export default Crops;

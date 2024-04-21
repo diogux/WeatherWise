@@ -3,6 +3,7 @@ import './dailyWeatherDetails.css';
 
 const dailyWeatherDetails = () => {
     const mondayDetails = {
+      location: 'Aveiro',
       day: 'Tuesday',
       icon: '☀️',
       pressure: "1002mb",
@@ -14,6 +15,10 @@ const dailyWeatherDetails = () => {
     <div className="daily-weather-details bg-white/50 text-grey">
       <table>
         <tbody>
+          <tr>
+            <td><strong>Location:</strong></td>
+            <td>{mondayDetails.location}</td>
+          </tr>
           <tr>
             <td><strong>Day:</strong></td>
             <td>{mondayDetails.day}</td>
