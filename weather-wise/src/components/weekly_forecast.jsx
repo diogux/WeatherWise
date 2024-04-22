@@ -5,13 +5,13 @@ const WeeklyWeatherForecast = ({ location }) => {
   // Adjusted weather data based on location
   const forecastDataByLocation = {
     'Lisboa': [
-      { date: 21, day: 'Mon', icon: '🌞', high: 28, low: 20 },
+      { date: 21, day: 'Mon', icon: '☀️', high: 28, low: 20 },
       { date: 22, day: 'Tue', icon: '🌤️', high: 30, low: 22 },
       { date: 23, day: 'Wed', icon: '🌤️', high: 31, low: 23 },
       { date: 24, day: 'Thu', icon: '🌥️', high: 29, low: 21 },
       { date: 25, day: 'Fri', icon: '⛅', high: 28, low: 20 },
       { date: 26, day: 'Sat', icon: '🌤️', high: 27, low: 19 },
-      { date: 27, day: 'Sun', icon: '🌞', high: 26, low: 18 },
+      { date: 27, day: 'Sun', icon: '☀️', high: 26, low: 18 },
     ],
     'Aveiro': [
       { date: 21, day: 'Mon', icon: '🌥️', high: 26, low: 18 },
@@ -25,7 +25,7 @@ const WeeklyWeatherForecast = ({ location }) => {
     'Porto': [
       { date: 21, day: 'Mon', icon: '🌥️', high: 27, low: 19 },
       { date: 22, day: 'Tue', icon: '🌤️', high: 28, low: 20 },
-      { date: 23, day: 'Wed', icon: '🌞', high: 26, low: 18 },
+      { date: 23, day: 'Wed', icon: '☀️', high: 26, low: 18 },
       { date: 24, day: 'Thu', icon: '🌦️', high: 22, low: 16 },
       { date: 25, day: 'Fri', icon: '🌧️', high: 20, low: 14 },
       { date: 26, day: 'Sat', icon: '🌧️', high: 19, low: 13 },

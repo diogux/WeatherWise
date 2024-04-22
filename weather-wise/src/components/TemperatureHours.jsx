@@ -9,8 +9,8 @@ const TemperatureHours = ({ location }) => {
       { time: "13h", temperature: "21°C", icon: "🌤️" },
       { time: "14h", temperature: "22°C", icon: "⛅" },
       { time: "15h", temperature: "22°C", icon: "⛅" },
-      { time: "16h", temperature: "21°C", icon: "�️" },
-      { time: "17h", temperature: "20°C", icon: "�️" },
+      { time: "16h", temperature: "21°C", icon: "☀️" },
+      { time: "17h", temperature: "20°C", icon: "☀️" },
       { time: "18h", temperature: "19°C", icon: "☀️" },
     ],
     'Aveiro': [

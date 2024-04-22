@@ -17,20 +17,25 @@ export default function SearchBar({ placeholder, onLocationChange }) {
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSearch();
+      handleClear();
     }
-  }
+  };
 
- const handleSearch = () => {
-  // Check if the searchTerm exists in the wordsData array
-  const foundWord = wordsData.find(word => word.toLowerCase() === searchTerm.toLowerCase());
+  const handleSearch = () => {
+    // Check if the searchTerm exists in the wordsData array
+    const foundWord = wordsData.find(word => word.toLowerCase() === searchTerm.toLowerCase());
   
-  if (foundWord) {
-    // Pass selected value to parent component
-    onLocationChange(foundWord);
-  } else {
+    if (foundWord) {
+      // Pass selected value to parent component
+      onLocationChange(foundWord);
+    } else {
+      setSearchTerm("");
+    }
+  };
+
+  const handleClear = () => {
     setSearchTerm("");
-  }
-};
+  };
 
   return (
     <div className="flex items-center space-x-2">
@@ -48,7 +53,7 @@ export default function SearchBar({ placeholder, onLocationChange }) {
           <option key={index} value={word} />
         ))}
       </datalist>
-      <Button className="px-3 py-2" onClick={handleSearch}>
+      <Button className="px-3 py-2 bg-black/20" onClick={() => { handleSearch(); handleClear(); }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
