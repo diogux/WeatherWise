@@ -4,6 +4,7 @@ import Forecast from './pages/Forecast'
 import Crops from './pages/Crops'
 import Travel from './pages/Travel'
 import Storms from './pages/Storms'
+import AboutUs from './pages/AboutUs'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/crops' element={<Crops />} />
         <Route path='/travel' element={<Travel />} />
         <Route path='/storms' element={<Storms />} />
+        <Route path='/AboutUs' element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   )

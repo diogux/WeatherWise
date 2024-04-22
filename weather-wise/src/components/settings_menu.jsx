@@ -21,7 +21,7 @@ function settings_menu () {
       <NavigationMenuContent>
         <Link className={navigationMenuTriggerStyle()} >Help</Link> 
         <Link className={navigationMenuTriggerStyle()} >Contacts</Link>
-        <Link className={navigationMenuTriggerStyle()} >About Us</Link>
+        <Link to={'/AboutUs'} className={navigationMenuTriggerStyle()} >About Us</Link>
       </NavigationMenuContent>
     </NavigationMenuItem>
   </NavigationMenuList>
