@@ -4,10 +4,21 @@ import Navbar from '../components/navbar';
 import WeeklyWeatherForecast from '@/components/weekly_forecast';
 import DailyWeatherDetails from '@/components/dailyWeatherDetails';
 import ForecastMap from '@/components/ForecastMap';
-import Search from '@/components/search';
+import SearchMap from '@/components/search_map';
 import TemperatureHours from '@/components/TemperatureHours';
+import { useState } from 'react';
 
 function Forecast() {
+
+
+  const [selectedLocation, setSelectedLocation] = useState('');
+
+  const handleLocationChange = (location) => {
+    setSelectedLocation(location);
+  };
+
+
+
   return (
     <>
       <div className="background-container flex-col min-h-screen">
@@ -26,13 +37,13 @@ function Forecast() {
               <p className="text-2xl font-bold text-white/80 mt-10 ml-20">Hourly Temperature</p>
             </div>
             <div className='flex justify-left'>  
-              <DailyWeatherDetails />
+              <DailyWeatherDetails location={selectedLocation}/>
               <TemperatureHours />
             </div>
           </div>
           <div className="w-1/2 pl-4"> {/* Right side for the map */}
             <div className="mb-2"> {/* Add margin-bottom to the search */}
-              <Search placeholder="Search for a location" />
+              <SearchMap placeholder="Search for a location" onLocationChange={handleLocationChange}/>
             </div>
             <ForecastMap />
           </div>

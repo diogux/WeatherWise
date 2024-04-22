@@ -1,23 +1,23 @@
 import React from 'react';
 import './dailyWeatherDetails.css';
 
-const dailyWeatherDetails = () => {
-    const mondayDetails = {
-      location: 'Aveiro',
-      day: 'Tuesday',
-      icon: '☀️',
-      pressure: "1002mb",
-      sunset: "20h34",
-      humidity: 30,
-      wind: 10,
-    };
+const DailyWeatherDetails = ({ location }) => {
+  const mondayDetails = {
+    day: 'Tuesday',
+    icon: '☀️',
+    pressure: "1002mb",
+    sunset: "20h34",
+    humidity: 30,
+    wind: 10,
+  };
+
   return (
     <div className="daily-weather-details bg-white/50 text-grey">
       <table>
         <tbody>
           <tr>
             <td><strong>Location:</strong></td>
-            <td>{mondayDetails.location}</td>
+            <td>{location}</td>
           </tr>
           <tr>
             <td><strong>Day:</strong></td>
@@ -49,4 +49,4 @@ const dailyWeatherDetails = () => {
   );
 };
 
-export default dailyWeatherDetails;
+export default DailyWeatherDetails;
