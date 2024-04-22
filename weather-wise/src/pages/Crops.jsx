@@ -3,8 +3,17 @@ import Navbar from '../components/navbar';
 import Search from '../components/search';
 import VHImap from '../components/VHImap';
 
-
 function Crops() {
+  const legendItems = [
+    { range: '90-100', color: '#008000' },
+    { range: '75-89', color: '#ADFF2F' },
+    { range: '60-74', color: '#FFFF00' },
+    { range: '45-59', color: '#FFB000' },
+    { range: '30-44', color: '#FFA300' },
+    { range: '15-29', color: '#A52A2A' },
+    { range: '0-14', color: '#8B0000' }
+  ];
+
   return (
     <>
       <Navbar />
@@ -16,17 +25,19 @@ function Crops() {
           <Search placeholder="Search for a district" />
         </div>
         <div className="flex justify-between"> {/* Aligns legend and map */}
-          <div className="w-1/4" style={{ paddingRight: '20px' }}>
+          <div className="w-1/8" style={{ paddingRight: '20px' }}>
+            {/* change the w-1/8 to w-1/4 to get the normal size */}
             <div className="border border-gray-300 rounded-md overflow-hidden">
-              <div className="legend">
-                <div className="legend-item" style={{ backgroundColor: '#008000' }}>90-100</div>
-                <div className="legend-item" style={{ backgroundColor: '#ADFF2F' }}>75-89</div>
-                <div className="legend-item" style={{ backgroundColor: '#FFFF00' }}>60-74</div>
-                <div className="legend-item" style={{ backgroundColor: '#FFB000' }}>45-59</div>
-                <div className="legend-item" style={{ backgroundColor: '#FFA300' }}>30-44</div>
-                <div className="legend-item" style={{ backgroundColor: '#A52A2A' }}>15-29</div>
-                <div className="legend-item" style={{ backgroundColor: '#8B0000' }}>0-14</div>
-              </div>
+              <table>
+                <tbody>
+                  {legendItems.map((item, index) => (
+                    <tr key={index}>
+                      <td className="legend-item w-7" style={{ backgroundColor: item.color }}></td>
+                      <td className="legend-item" style={{ backgroundColor: '#FFFFFF' }} >{item.range}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
           <div className="w-1/3"> {/* Aligns map to the right */}
