@@ -11,10 +11,25 @@ import { useState } from 'react';
 function Forecast() {
 
 
-  const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedLocation, setSelectedLocation] = useState('Aveiro');
+  const [wind, setWind] = useState('10'); // Initialize wind state
+  const [humidity, setHumidity] = useState('35'); // Initialize humidity state
 
   const handleLocationChange = (location) => {
     setSelectedLocation(location);
+
+    // Update wind and humidity values
+    if (location === 'Aveiro') {
+      setWind('10');
+      setHumidity('35');
+    } else if (location === 'Lisboa') {
+      setWind('15');
+      setHumidity('40');
+    } else if (location === 'Porto') {
+      setWind('12');
+      setHumidity('30');
+    }
+
   };
 
 
@@ -30,15 +45,15 @@ function Forecast() {
           <div className="w-1/2 pr-4"> {/* Left side for the table */}
             <p className="text-2xl font-bold text-white/80">Week</p>
             <div className='flex justify-left'>  
-              <WeeklyWeatherForecast />
+              <WeeklyWeatherForecast location={selectedLocation} />
             </div>
             <div className='flex justify-left'>
               <p className="text-2xl font-bold text-white/80 mt-10 mr-20">Today</p>
               <p className="text-2xl font-bold text-white/80 mt-10 ml-20">Hourly Temperature</p>
             </div>
             <div className='flex justify-left'>  
-              <DailyWeatherDetails location={selectedLocation}/>
-              <TemperatureHours />
+              <DailyWeatherDetails location={selectedLocation} wind={wind} humidity={humidity}/>
+              <TemperatureHours location={selectedLocation}/>
             </div>
           </div>
           <div className="w-1/2 pl-4"> {/* Right side for the map */}

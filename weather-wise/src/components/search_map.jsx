@@ -1,4 +1,3 @@
-// SearchBar.js
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +13,12 @@ export default function SearchBar({ placeholder, onLocationChange }) {
   const filteredWords = wordsData.filter((word) =>
     word.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  }
 
  const handleSearch = () => {
   // Check if the searchTerm exists in the wordsData array
@@ -34,6 +39,7 @@ export default function SearchBar({ placeholder, onLocationChange }) {
         list="words"
         value={searchTerm}
         onChange={handleInputChange}
+        onKeyPress={handleKeyPress}
         className="px-3 py-2 w-80 border-indigo-600"
         placeholder={placeholder}
       />

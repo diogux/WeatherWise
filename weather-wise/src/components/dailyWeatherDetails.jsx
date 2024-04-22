@@ -1,14 +1,12 @@
 import React from 'react';
 import './dailyWeatherDetails.css';
 
-const DailyWeatherDetails = ({ location }) => {
+const DailyWeatherDetails = ({ location, wind, humidity }) => {
   const mondayDetails = {
     day: 'Tuesday',
     icon: '☀️',
     pressure: "1002mb",
     sunset: "20h34",
-    humidity: 30,
-    wind: 10,
   };
 
   return (
@@ -37,11 +35,11 @@ const DailyWeatherDetails = ({ location }) => {
           </tr>
           <tr>
             <td><strong>Humidity:</strong></td>
-            <td>{mondayDetails.humidity}%</td>
+            <td>{humidity}%</td>
           </tr>
           <tr>
             <td><strong>Wind:</strong></td>
-            <td>{mondayDetails.wind} km/h</td>
+            <td>{wind} km/h</td>
           </tr>
         </tbody>
       </table>
