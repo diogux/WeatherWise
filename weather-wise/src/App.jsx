@@ -5,6 +5,7 @@ import Crops from './pages/Crops'
 import Travel from './pages/Travel'
 import Storms from './pages/Storms'
 import AboutUs from './pages/AboutUs'
+import PageNotFound from './pages/PageNotFound'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -20,6 +21,10 @@ function App() {
         <Route path='/travel' element={<Travel />} />
         <Route path='/storms' element={<Storms />} />
         <Route path='/AboutUs' element={<AboutUs />} />
+        <Route
+            path="*"
+            element={<PageNotFound />}
+        />
       </Routes>
     </BrowserRouter>
   )
