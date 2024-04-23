@@ -1,6 +1,6 @@
-import React from 'react';
 import './card.css';
 
+// eslint-disable-next-line react/prop-types
 function Card({ name, description, imageSrc }) {
   return (
     <div className="card w-70 h-70 bg-white/30 shadow-xl">

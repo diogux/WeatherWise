@@ -1,6 +1,6 @@
-import React from 'react';
 import './card.css';
 
+// eslint-disable-next-line react/prop-types
 function Card({ name, description, imageSrc }) {
   const openModal = () => {
     const modal = document.getElementById('my_modal_2');
