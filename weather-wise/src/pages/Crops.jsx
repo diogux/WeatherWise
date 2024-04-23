@@ -3,13 +3,14 @@ import '../App.css';
 import Navbar from '../components/navbar';
 import VHImap from '../components/VHImap';
 import SearchMap from '@/components/search_map';
+import PWSmap from '@/components/PWSmap';
 
 function Crops() {
   // Step 1: Define filter options
   const filterOptions = [
     { label: 'Vegetation Health Index', value: 'VHI' },
-    { label: 'Option 2', value: 'option2' },
-    { label: 'Option 3', value: 'option3' },
+    { label: 'Percentage of water in the soil', value: 'PWS' },
+    { label: 'Number of cold hours', value: 'NCH' },
     // Add more options as needed
   ];
 
@@ -22,6 +23,20 @@ const VHIItems = [
     { range: '15-29', color: '#A52A2A' },
     { range: '0-14', color: '#8B0000' }
   ];
+
+  const PWSItems = [
+    { color: '#00008B', range: 'CC(>99)' },
+    { color: '#FFA500', range: '[50, 60]' },
+    { color: '#ADFF2F', range: '[40, 50]' },
+    { color: '#008000', range: '[30, 40]' },
+    { color: '#00FFFF', range: '[20, 30]' },
+    { color: '#0000FF', range: '[10, 20}' },
+    { color: '#FF0000', range: 'PEP(>1)' }
+  ];
+  
+  
+
+
 
   // Step 2: Set up state to track selected filter
   const [selectedFilter, setSelectedFilter] = useState('VHI'); // Set default to 'VHI'
@@ -47,6 +62,22 @@ const VHIItems = [
               </table>
             </div>
   );
+
+  const PWSfilter = (
+    <div className="border border-gray-300 rounded-md overflow-hidden">
+      <table>
+        <tbody>
+          {PWSItems.map((item, index) => (
+            <tr key={index}>
+              <td className="legend-item w-7" style={{ backgroundColor: item.color }}></td>
+              <td className="legend-item" style={{ backgroundColor: '#FFFFFF' }}>{item.range}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+  
   
   return (
     <>
@@ -55,8 +86,8 @@ const VHIItems = [
         <div className="py-10">
           <h2 className="text-4xl font-bold text-gray-800">Crops</h2>
         </div>
-        <div className="flex justify-between"> {/* Aligns legend and map */}
-          <div className="w-1/4" style={{ paddingRight: '20px' }}>
+        <div className="flex"> {/* Aligns legend and map */}
+          <div className="w-1/4" style={{ paddingRight: '0px' }}>
             {/* Step 4: Add filter menu */}
             <div>
               <select
@@ -73,14 +104,16 @@ const VHIItems = [
             </div>
             {/* Step 5: Conditional rendering based on selected filter */}
             {selectedFilter === 'VHI' && VHIfilter}
+            {selectedFilter === 'PWS' && PWSfilter}
           </div>
-          <div className="w-1/2 pl-4"> {/* Right side for the map */}
+          <div className="w-1/2 pl-20"> {/* Right side for the map */}
             <div className="mb-2"> {/* Add margin-bottom to the search */}
               <SearchMap placeholder="Search for a location"/>
             </div>
             {/* Step 5: Conditional rendering based on selected filter */}
             {selectedFilter === 'VHI' && <VHImap />}
-            {/* Add conditional rendering for other options if needed */}
+            {selectedFilter === 'PWS' && <PWSmap />}
+            {selectedFilter === 'NCH' && <NCHmap />}
           </div>
         </div>
       </div>
