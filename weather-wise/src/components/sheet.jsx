@@ -1,8 +1,4 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPencil } from '@fortawesome/free-solid-svg-icons';
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetClose,
@@ -12,32 +8,33 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet";
+import SheetContentDemo from './sheet_content';  // Ensure you import the SheetContentDemo component
 
 export function SheetDemo() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button>Personalize</Button>
+        <Button className='bg-black/30 w-40'>Personalize Cards</Button>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Edit cards</SheetTitle>
+          <SheetTitle>Edit Cards</SheetTitle>
           <SheetDescription>
             Personalize your favorite 4 cards here. Click save when you're done.
           </SheetDescription>
         </SheetHeader>
         <div className="grid gap-4 py-4">
-          
+          <SheetContentDemo />
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
+            <Button type="submit">Save Changes</Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>
     </Sheet>
-  )
+  );
 }
 
-export default SheetDemo
+export default SheetDemo;

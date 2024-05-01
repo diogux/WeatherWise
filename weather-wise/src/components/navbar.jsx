@@ -15,7 +15,7 @@ function Navbar() {
       <div className="flex-1">
         <Link className="btn btn-ghost text-xl" to='/home'><FontAwesomeIcon icon={faCloud}></FontAwesomeIcon>WeatherWise</Link> 
         <Navigation_Menu ></Navigation_Menu>
-        <Sheet></Sheet>
+        {/* <Sheet></Sheet> */}
       </div>
   
       <div className="ticker flex-1">
