@@ -1,8 +1,5 @@
 import '../App.css'
-import {Button} from "@/components/ui/button" 
 import Navbar from '../components/navbar'
-import Footer from '../components/footer'
-import Search from '../components/search'
 
 function Health() {
 
@@ -20,6 +17,9 @@ function Health() {
               <input type="radio" name="rating-3" className="mask mask-heart bg-green-400"  />
               dá para clicar nos corações
             </div>
+    <div className="weekly-forecast-table w-1/6 grow bg-white/50">
+                <div className="day text-grey text">Current Air Quality: GOOD</div>
+    </div>
             </div>
         </div>
 
