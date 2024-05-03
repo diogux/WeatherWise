@@ -41,12 +41,17 @@ const ForecastMap = () => {
     const sunIcon = new L.Icon({
       iconUrl: "https://cdn-icons-png.flaticon.com/128/3915/3915152.png",
       iconSize: [32, 32],
+      iconAnchor: [16, 32], // Ensures the icon is centered and touches the point
+      popupAnchor: [0, -32] // Ensures the popup opens above the icon
     });
-
+    
     const cloudIcon = new L.Icon({
       iconUrl: "https://cdn-icons-png.flaticon.com/128/3915/3915152.png",
       iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -32]
     });
+
 
     const mainLocations = [
       { name: 'Lisbon', coordinates: [38.7223, -9.1393], icon: sunIcon },
@@ -79,3 +84,4 @@ const ForecastMap = () => {
 };
 
 export default ForecastMap;
+
