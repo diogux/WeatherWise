@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import wordsData from "../data/Distritos.json";
+import wordsData from "../data/ConcelhosApenas.json";
 
 export default function SearchBar({ placeholder, onLocationChange }) {
   const [searchTerm, setSearchTerm] = useState("");
