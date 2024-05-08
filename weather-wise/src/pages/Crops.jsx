@@ -5,6 +5,7 @@ import VHImap from "../components/VHImap";
 import SearchMap from "@/components/search_map_concelhos";
 import PWSmap from "@/components/PWSmap";
 import CropsVHI from "@/components/crops_vhi";
+import ConcelhoColors from "../data/ConcelhoColors.json";
 
 function Crops() {
   // Step 1: Define filter options
@@ -20,17 +21,13 @@ function Crops() {
 
   const handleLocationChange = (location) => {
     setSelectedLocation(location);
-
-    // Update wind and humidity values
-    if (location === "Aveiro") {
-      setVHI("10");
-    } else if (location === "Lisboa") {
-      setVHI("15");
-    } else if (location === "Porto") {
-      setVHI("12");
-    } else if (location === "Fafe") {
-      setVHI("20");
+    for (const concelho of ConcelhoColors.concelhos) {
+      if (concelho.name === location.toUpperCase()) {
+        // setVHI(concelho.color);
+        setVHI(concelho.color);
+      }
     }
+    // Update wind and humidity values
   };
 
   const VHIItems = [

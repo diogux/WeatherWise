@@ -1,282 +1,1100 @@
 {
-  "concelhos": [
-    {"name": "ÁGUEDA", "color": "#FF5733"},
-    {"name": "ALBERGARIA-A-VELHA", "color": "#33FF57"},
-    {"name": "ANADIA", "color": "#5733FF"},
-    {"name": "AROUCA", "color": "#8B0000"},
-    {"name": "AVEIRO", "color": "#A52A2A"},
-    {"name": "CASTELO DE PAIVA", "color": "#FF0000"},
-    {"name": "ESPINHO", "color": "#FFA500"},
-    {"name": "ESTARREJA", "color": "#FFFF00"},
-    {"name": "SANTA MARIA DA FEIRA", "color": "#ADFF2F"},
-    {"name": "ÍLHAVO", "color": "#008000"},
-    {"name": "MEALHADA", "color": "#FF5733"},
-    {"name": "MURTOSA", "color": "#33FF57"},
-    {"name": "OLIVEIRA DE AZEMÉIS", "color": "#5733FF"},
-    {"name": "OLIVEIRA DO BAIRRO", "color": "#8B0000"},
-    {"name": "OVAR", "color": "#A52A2A"},
-    {"name": "SÃO JOÃO DA MADEIRA", "color": "#FF0000"},
-    {"name": "SEVER DO VOUGA", "color": "#FFA500"},
-    {"name": "VAGOS", "color": "#FFFF00"},
-    {"name": "VALE DE CAMBRA", "color": "#ADFF2F"},
-    {"name": "ALJUSTREL", "color": "#008000"},
-    {"name": "ALMODÔVAR", "color": "#FF5733"},
-    {"name": "ALVITO", "color": "#33FF57"},
-    {"name": "BARRANCOS", "color": "#5733FF"},
-    {"name": "BEJA", "color": "#8B0000"},
-    {"name": "CASTRO VERDE", "color": "#A52A2A"},
-    {"name": "CUBA", "color": "#FF0000"},
-    {"name": "FERREIRA DO ALENTEJO", "color": "#FFA500"},
-    {"name": "MÉRTOLA", "color": "#FFFF00"},
-    {"name": "MOURA", "color": "#ADFF2F"},
-    {"name": "ODEMIRA", "color": "#008000"},
-    {"name": "OURIQUE", "color": "#FF5733"},
-    {"name": "SERPA", "color": "#33FF57"},
-    {"name": "VIDIGUEIRA", "color": "#5733FF"},
-    {"name": "AMARES", "color": "#8B0000"},
-    {"name": "BARCELOS", "color": "#A52A2A"},
-    {"name": "BRAGA", "color": "#FF0000"},
-    {"name": "CABECEIRAS DE BASTO", "color": "#FFA500"},
-    {"name": "CELORICO DE BASTO", "color": "#FFFF00"},
-    {"name": "ESPOSENDE", "color": "#ADFF2F"},
-    {"name": "FAFE", "color": "#008000"},
-    {"name": "GUIMARÃES", "color": "#FF5733"},
-    {"name": "PÓVOA DE LANHOSO", "color": "#33FF57"},
-    {"name": "TERRAS DE BOURO", "color": "#5733FF"},
-    {"name": "VIEIRA DO MINHO", "color": "#8B0000"},
-    {"name": "VILA NOVA DE FAMALICÃO", "color": "#A52A2A"},
-    {"name": "VILA VERDE", "color": "#FF0000"},
-    {"name": "VIZELA", "color": "#FFA500"},
-    {"name": "ALFÂNDEGA DA FÉ", "color": "#FFFF00"},
-    {"name": "BRAGANÇA", "color": "#ADFF2F"},
-    {"name": "CARRAZEDA DE ANSIÃES", "color": "#008000"},
-    {"name": "FREIXO DE ESPADA À CINTA", "color": "#FF5733"},
-    {"name": "MACEDO DE CAVALEIROS", "color": "#33FF57"},
-    {"name": "MIRANDA DO DOURO", "color": "#5733FF"},
-    {"name": "MIRANDELA", "color": "#8B0000"},
-    {"name": "MOGADOURO", "color": "#A52A2A"},
-    {"name": "TORRE DE MONCORVO", "color": "#FF0000"},
-    {"name": "VILA FLOR", "color": "#FFA500"},
-    {"name": "VIMIOSO", "color": "#FFFF00"},
-    {"name": "VINHAIS", "color": "#ADFF2F"},
-    {"name": "BELMONTE", "color": "#008000"},
-    {"name": "CASTELO BRANCO", "color": "#FF5733"},
-    {"name": "COVILHÃ", "color": "#33FF57"},
-    {"name": "FUNDÃO", "color": "#5733FF"},
-    {"name": "IDANHA-A-NOVA", "color": "#8B0000"},
-    {"name": "OLEIROS", "color": "#A52A2A"},
-    {"name": "PENAMACOR", "color": "#FF0000"},
-    {"name": "PROENÇA-A-NOVA", "color": "#FFA500"},
-    {"name": "SERTÃ", "color": "#FFFF00"},
-    {"name": "VILA DE REI", "color": "#ADFF2F"},
-    {"name": "VILA VELHA DE RÓDÃO", "color": "#008000"},
-    {"name": "ARGANIL", "color": "#FF5733"},
-    {"name": "CANTANHEDE", "color": "#33FF57"},
-    {"name": "COIMBRA", "color": "#5733FF"},
-    {"name": "CONDEIXA-A-NOVA", "color": "#8B0000"},
-    {"name": "FIGUEIRA DA FOZ", "color": "#A52A2A"},
-    {"name": "GÓIS", "color": "#FF0000"},
-    {"name": "LOUSÃ", "color": "#FFA500"},
-    {"name": "MIRA", "color": "#FFFF00"},
-    {"name": "MIRANDA DO CORVO", "color": "#ADFF2F"},
-    {"name": "MONTEMOR-O-VELHO", "color": "#008000"},
-    {"name": "OLIVEIRA DO HOSPITAL", "color": "#FF5733"},
-    {"name": "PAMPILHOSA DA SERRA", "color": "#33FF57"},
-    {"name": "PENACOVA", "color": "#5733FF"},
-    {"name": "PENELA", "color": "#8B0000"},
-    {"name": "SOURE", "color": "#A52A2A"},
-    {"name": "TÁBUA", "color": "#FF0000"},
-    {"name": "VILA NOVA DE POIARES", "color": "#FFA500"},
-    {"name": "ALANDROAL", "color": "#FFFF00"},
-    {"name": "ARRAIOLOS", "color": "#ADFF2F"},
-    {"name": "BORBA", "color": "#008000"},
-    {"name": "ESTREMOZ", "color": "#FF5733"},
-    {"name": "ÉVORA", "color": "#33FF57"},
-    {"name": "MONTEMOR-O-NOVO", "color": "#5733FF"},
-    {"name": "MORA", "color": "#8B0000"},
-    {"name": "MOURÃO", "color": "#A52A2A"},
-    {"name": "PORTEL", "color": "#FF0000"},
-    {"name": "REDONDO", "color": "#FFA500"},
-    {"name": "REGUENGOS DE MONSARAZ", "color": "#FFFF00"},
-    {"name": "VENDAS NOVAS", "color": "#ADFF2F"},
-    {"name": "VIANA DO ALENTEJO", "color": "#008000"},
-    {"name": "VILA VIÇOSA", "color": "#FF5733"},
-    {"name": "ALBUFEIRA", "color": "#33FF57"},
-    {"name": "ALCOUTIM", "color": "#5733FF"},
-    {"name": "ALJEZUR", "color": "#8B0000"},
-    {"name": "CASTRO MARIM", "color": "#A52A2A"},
-    {"name": "FARO", "color": "#FF0000"},
-    {"name": "LAGOA", "color": "#FFA500"},
-    {"name": "LAGOS", "color": "#FFFF00"},
-    {"name": "LOULÉ", "color": "#ADFF2F"},
-    {"name": "MONCHIQUE", "color": "#008000"},
-    {"name": "OLHÃO", "color": "#FF5733"},
-    {"name": "PORTIMÃO", "color": "#33FF57"},
-    {"name": "SÃO BRÁS DE ALPORTEL", "color": "#5733FF"},
-    {"name": "SILVES", "color": "#8B0000"},
-    {"name": "TAVIRA", "color": "#A52A2A"},
-    {"name": "VILA DO BISPO", "color": "#FF0000"},
-    {"name": "VILA REAL DE SANTO ANTÓNIO", "color": "#FFA500"},
-    {"name": "AGUIAR DA BEIRA", "color": "#FFFF00"},
-    {"name": "ALMEIDA", "color": "#ADFF2F"},
-    {"name": "CELORICO DA BEIRA", "color": "#008000"},
-    {"name": "FIGUEIRA DE CASTELO RODRIGO", "color": "#FF5733"},
-    {"name": "FORNOS DE ALGODRES", "color": "#33FF57"},
-    {"name": "GOUVEIA", "color": "#5733FF"},
-    {"name": "GUARDA", "color": "#8B0000"},
-    {"name": "MANTEIGAS", "color": "#A52A2A"},
-    {"name": "MÊDA", "color": "#FF0000"},
-    {"name": "PINHEL", "color": "#FFA500"},
-    {"name": "SABUGAL", "color": "#FFFF00"},
-    {"name": "SEIA", "color": "#ADFF2F"},
-    {"name": "TRANCOSO", "color": "#008000"},
-    {"name": "VILA NOVA DE FOZ CÔA", "color": "#FF5733"},
-    {"name": "ALCOBAÇA", "color": "#33FF57"},
-    {"name": "ALVAIÁZERE", "color": "#5733FF"},
-    {"name": "ANSIÃO", "color": "#8B0000"},
-    {"name": "BATALHA", "color": "#A52A2A"},
-    {"name": "BOMBARRAL", "color": "#FF0000"},
-    {"name": "CALDAS DA RAINHA", "color": "#FFA500"},
-    {"name": "CASTANHEIRA DE PÊRA", "color": "#FFFF00"},
-    {"name": "FIGUEIRÓ DOS VINHOS", "color": "#ADFF2F"},
-    {"name": "LEIRIA", "color": "#008000"},
-    {"name": "MARINHA GRANDE", "color": "#FF5733"},
-    {"name": "NAZARÉ", "color": "#33FF57"},
-    {"name": "ÓBIDOS", "color": "#5733FF"},
-    {"name": "PEDRÓGÃO GRANDE", "color": "#8B0000"},
-    {"name": "PENICHE", "color": "#A52A2A"},
-    {"name": "POMBAL", "color": "#FF0000"},
-    {"name": "PORTO DE MÓS", "color": "#FFA500"},
-    {"name": "ALENQUER", "color": "#FFFF00"},
-    {"name": "ARRUDA DOS VINHOS", "color": "#ADFF2F"},
-    {"name": "AZAMBUJA", "color": "#008000"},
-    {"name": "CADAVAL", "color": "#FF5733"},
-    {"name": "CASCAIS", "color": "#33FF57"},
-    {"name": "LISBOA", "color": "#5733FF"},
-    {"name": "LOURES", "color": "#8B0000"},
-    {"name": "LOURINHÃ", "color": "#A52A2A"},
-    {"name": "MAFRA", "color": "#FF0000"},
-    {"name": "OEIRAS", "color": "#FFA500"},
-    {"name": "SINTRA", "color": "#FFFF00"},
-    {"name": "SOBRAL DE MONTE AGRAÇO", "color": "#ADFF2F"},
-    {"name": "TORRES VEDRAS", "color": "#008000"},
-    {"name": "VILA FRANCA DE XIRA", "color": "#FF5733"},
-    {"name": "AMADORA", "color": "#33FF57"},
-    {"name": "ODIVELAS", "color": "#5733FF"},
-    {"name": "ALTER DO CHÃO", "color": "#8B0000"},
-    {"name": "ARRONCHES", "color": "#A52A2A"},
-    {"name": "AVIS", "color": "#FF0000"},
-    {"name": "CAMPO MAIOR", "color": "#FFA500"},
-    {"name": "CASTELO DE VIDE", "color": "#FFFF00"},
-    {"name": "CRATO", "color": "#ADFF2F"},
-    {"name": "ELVAS", "color": "#008000"},
-    {"name": "FRONTEIRA", "color": "#FF5733"},
-    {"name": "GAVIÃO", "color": "#33FF57"},
-    {"name": "MARVÃO", "color": "#5733FF"},
-    {"name": "MONFORTE", "color": "#8B0000"},
-    {"name": "NISA", "color": "#A52A2A"},
-    {"name": "PONTE DE SOR", "color": "#FF0000"},
-    {"name": "PORTALEGRE", "color": "#FFA500"},
-    {"name": "SOUSEL", "color": "#FFFF00"},
-    {"name": "AMARANTE", "color": "#ADFF2F"},
-    {"name": "BAIÃO", "color": "#008000"},
-    {"name": "FELGUEIRAS", "color": "#FF5733"},
-    {"name": "GONDOMAR", "color": "#33FF57"},
-    {"name": "LOUSADA", "color": "#5733FF"},
-    {"name": "MAIA", "color": "#8B0000"},
-    {"name": "MARCO DE CANAVESES", "color": "#A52A2A"},
-    {"name": "MATOSINHOS", "color": "#FF0000"},
-    {"name": "PAÇOS DE FERREIRA", "color": "#FFA500"},
-    {"name": "PAREDES", "color": "#FFFF00"},
-    {"name": "PENAFIEL", "color": "#ADFF2F"},
-    {"name": "PORTO", "color": "#008000"},
-    {"name": "PÓVOA DE VARZIM", "color": "#FF5733"},
-    {"name": "SANTO TIRSO", "color": "#33FF57"},
-    {"name": "VALONGO", "color": "#5733FF"},
-    {"name": "VILA DO CONDE", "color": "#8B0000"},
-    {"name": "VILA NOVA DE GAIA", "color": "#A52A2A"},
-    {"name": "TROFA", "color": "#FF0000"},
-    {"name": "ABRANTES", "color": "#FFA500"},
-    {"name": "ALCANENA", "color": "#FFFF00"},
-    {"name": "ALMEIRIM", "color": "#ADFF2F"},
-    {"name": "ALPIARÇA", "color": "#008000"},
-    {"name": "BENAVENTE", "color": "#FF5733"},
-    {"name": "CARTAXO", "color": "#33FF57"},
-    {"name": "CHAMUSCA", "color": "#5733FF"},
-    {"name": "CONSTÂNCIA", "color": "#8B0000"},
-    {"name": "CORUCHE", "color": "#A52A2A"},
-    {"name": "ENTRONCAMENTO", "color": "#FF0000"},
-    {"name": "FERREIRA DO ZÊZERE", "color": "#FFA500"},
-    {"name": "GOLEGÃ", "color": "#FFFF00"},
-    {"name": "MAÇÃO", "color": "#ADFF2F"},
-    {"name": "RIO MAIOR", "color": "#008000"},
-    {"name": "SALVATERRA DE MAGOS", "color": "#FF5733"},
-    {"name": "SANTARÉM", "color": "#33FF57"},
-    {"name": "SARDOAL", "color": "#5733FF"},
-    {"name": "TOMAR", "color": "#8B0000"},
-    {"name": "TORRES NOVAS", "color": "#A52A2A"},
-    {"name": "VILA NOVA DA BARQUINHA", "color": "#FF0000"},
-    {"name": "OURÉM", "color": "#FFA500"},
-    {"name": "ALCÁCER DO SAL", "color": "#FFFF00"},
-    {"name": "ALCOCHETE", "color": "#ADFF2F"},
-    {"name": "ALMADA", "color": "#008000"},
-    {"name": "BARREIRO", "color": "#FF5733"},
-    {"name": "GRÂNDOLA", "color": "#33FF57"},
-    {"name": "MOITA", "color": "#5733FF"},
-    {"name": "MONTIJO", "color": "#8B0000"},
-    {"name": "PALMELA", "color": "#A52A2A"},
-    {"name": "SANTIAGO DO CACÉM", "color": "#FF0000"},
-    {"name": "SEIXAL", "color": "#FFA500"},
-    {"name": "SESIMBRA", "color": "#FFFF00"},
-    {"name": "SETÚBAL", "color": "#ADFF2F"},
-    {"name": "SINES", "color": "#008000"},
-    {"name": "ARCOS DE VALDEVEZ", "color": "#FF5733"},
-    {"name": "CAMINHA", "color": "#33FF57"},
-    {"name": "MELGAÇO", "color": "#5733FF"},
-    {"name": "MONÇÃO", "color": "#8B0000"},
-    {"name": "PAREDES DE COURA", "color": "#A52A2A"},
-    {"name": "PONTE DA BARCA", "color": "#FF0000"},
-    {"name": "PONTE DE LIMA", "color": "#FFA500"},
-    {"name": "VALENÇA", "color": "#FFFF00"},
-    {"name": "VIANA DO CASTELO", "color": "#ADFF2F"},
-    {"name": "VILA NOVA DE CERVEIRA", "color": "#008000"},
-    {"name": "ALIJÓ", "color": "#FF5733"},
-    {"name": "BOTICAS", "color": "#33FF57"},
-    {"name": "CHAVES", "color": "#5733FF"},
-    {"name": "MESÃO FRIO", "color": "#8B0000"},
-    {"name": "MONDIM DE BASTO", "color": "#A52A2A"},
-    {"name": "MONTALEGRE", "color": "#FF0000"},
-    {"name": "MURÇA", "color": "#FFA500"},
-    {"name": "PESO DA RÉGUA", "color": "#FFFF00"},
-    {"name": "RIBEIRA DE PENA", "color": "#ADFF2F"},
-    {"name": "SABROSA", "color": "#008000"},
-    {"name": "SANTA MARTA DE PENAGUIÃO", "color": "#FF5733"},
-    {"name": "VALPAÇOS", "color": "#33FF57"},
-    {"name": "VILA POUCA DE AGUIAR", "color": "#5733FF"},
-    {"name": "VILA REAL", "color": "#8B0000"},
-    {"name": "ARMAMAR", "color": "#A52A2A"},
-    {"name": "CARREGAL DO SAL", "color": "#FF0000"},
-    {"name": "CASTRO DAIRE", "color": "#FFA500"},
-    {"name": "CINFÃES", "color": "#FFFF00"},
-    {"name": "LAMEGO", "color": "#ADFF2F"},
-    {"name": "MANGUALDE", "color": "#008000"},
-    {"name": "MOIMENTA DA BEIRA", "color": "#FF5733"},
-    {"name": "MORTÁGUA", "color": "#33FF57"},
-    {"name": "NELAS", "color": "#5733FF"},
-    {"name": "OLIVEIRA DE FRADES", "color": "#8B0000"},
-    {"name": "PENALVA DO CASTELO", "color": "#A52A2A"},
-    {"name": "PENEDONO", "color": "#FF0000"},
-    {"name": "RESENDE", "color": "#FFA500"},
-    {"name": "SANTA COMBA DÃO", "color": "#FFFF00"},
-    {"name": "SÃO JOÃO DA PESQUEIRA", "color": "#ADFF2F"},
-    {"name": "SÃO PEDRO DO SUL", "color": "#008000"},
-    {"name": "SÁTÃO", "color": "#FF5733"},
-    {"name": "SERNANCELHE", "color": "#33FF57"},
-    {"name": "TABUAÇO", "color": "#5733FF"},
-    {"name": "TAROUCA", "color": "#8B0000"},
-    {"name": "TONDELA", "color": "#A52A2A"},
-    {"name": "VILA NOVA DE PAIVA", "color": "#FF0000"},
-    {"name": "VISEU", "color": "#FFA500"},
-    {"name": "VOUZELA", "color": "#FFFF00"}
-  ]
+    "concelhos": [
+        {
+            "name": "\u00c1GUEDA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "ALBERGARIA-A-VELHA",
+            "color": "#008000"
+        },
+        {
+            "name": "ANADIA",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "AROUCA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "AVEIRO",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "CASTELO DE PAIVA",
+            "color": "#008000"
+        },
+        {
+            "name": "ESPINHO",
+            "color": "#FFB000"
+        },
+        {
+            "name": "ESTARREJA",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "SANTA MARIA DA FEIRA",
+            "color": "#FFA300"
+        },
+        {
+            "name": "\u00cdLHAVO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "MEALHADA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "MURTOSA",
+            "color": "#FFB000"
+        },
+        {
+            "name": "OLIVEIRA DE AZEM\u00c9IS",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "OLIVEIRA DO BAIRRO",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "OVAR",
+            "color": "#FFB000"
+        },
+        {
+            "name": "S\u00c3O JO\u00c3O DA MADEIRA",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "SEVER DO VOUGA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "VAGOS",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "VALE DE CAMBRA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "ALJUSTREL",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "ALMOD\u00d4VAR",
+            "color": "#8B0000"
+        },
+        {
+            "name": "ALVITO",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "BARRANCOS",
+            "color": "#FFA300"
+        },
+        {
+            "name": "BEJA",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "CASTRO VERDE",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "CUBA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "FERREIRA DO ALENTEJO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "M\u00c9RTOLA",
+            "color": "#FFA300"
+        },
+        {
+            "name": "MOURA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "ODEMIRA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "OURIQUE",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "SERPA",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "VIDIGUEIRA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "AMARES",
+            "color": "#8B0000"
+        },
+        {
+            "name": "BARCELOS",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "BRAGA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "CABECEIRAS DE BASTO",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "CELORICO DE BASTO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "ESPOSENDE",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "FAFE",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "GUIMAR\u00c3ES",
+            "color": "#008000"
+        },
+        {
+            "name": "P\u00d3VOA DE LANHOSO",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "TERRAS DE BOURO",
+            "color": "#FFA300"
+        },
+        {
+            "name": "VIEIRA DO MINHO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "VILA NOVA DE FAMALIC\u00c3O",
+            "color": "#8B0000"
+        },
+        {
+            "name": "VILA VERDE",
+            "color": "#008000"
+        },
+        {
+            "name": "VIZELA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "ALF\u00c2NDEGA DA F\u00c9",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "BRAGAN\u00c7A",
+            "color": "#FFA300"
+        },
+        {
+            "name": "CARRAZEDA DE ANSI\u00c3ES",
+            "color": "#FFA300"
+        },
+        {
+            "name": "FREIXO DE ESPADA \u00c0 CINTA",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "MACEDO DE CAVALEIROS",
+            "color": "#FFB000"
+        },
+        {
+            "name": "MIRANDA DO DOURO",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "MIRANDELA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "MOGADOURO",
+            "color": "#008000"
+        },
+        {
+            "name": "TORRE DE MONCORVO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "VILA FLOR",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "VIMIOSO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "VINHAIS",
+            "color": "#FFA300"
+        },
+        {
+            "name": "BELMONTE",
+            "color": "#FFA300"
+        },
+        {
+            "name": "CASTELO BRANCO",
+            "color": "#008000"
+        },
+        {
+            "name": "COVILH\u00c3",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "FUND\u00c3O",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "IDANHA-A-NOVA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "OLEIROS",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "PENAMACOR",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "PROEN\u00c7A-A-NOVA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "SERT\u00c3",
+            "color": "#FFA300"
+        },
+        {
+            "name": "VILA DE REI",
+            "color": "#FFA300"
+        },
+        {
+            "name": "VILA VELHA DE R\u00d3D\u00c3O",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "ARGANIL",
+            "color": "#008000"
+        },
+        {
+            "name": "CANTANHEDE",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "COIMBRA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "CONDEIXA-A-NOVA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "FIGUEIRA DA FOZ",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "G\u00d3IS",
+            "color": "#FFA300"
+        },
+        {
+            "name": "LOUS\u00c3",
+            "color": "#FFB000"
+        },
+        {
+            "name": "MIRA",
+            "color": "#008000"
+        },
+        {
+            "name": "MIRANDA DO CORVO",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "MONTEMOR-O-VELHO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "OLIVEIRA DO HOSPITAL",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "PAMPILHOSA DA SERRA",
+            "color": "#FFA300"
+        },
+        {
+            "name": "PENACOVA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "PENELA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "SOURE",
+            "color": "#8B0000"
+        },
+        {
+            "name": "T\u00c1BUA",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "VILA NOVA DE POIARES",
+            "color": "#008000"
+        },
+        {
+            "name": "ALANDROAL",
+            "color": "#8B0000"
+        },
+        {
+            "name": "ARRAIOLOS",
+            "color": "#8B0000"
+        },
+        {
+            "name": "BORBA",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "ESTREMOZ",
+            "color": "#FFB000"
+        },
+        {
+            "name": "\u00c9VORA",
+            "color": "#008000"
+        },
+        {
+            "name": "MONTEMOR-O-NOVO",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "MORA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "MOUR\u00c3O",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "PORTEL",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "REDONDO",
+            "color": "#FFA300"
+        },
+        {
+            "name": "REGUENGOS DE MONSARAZ",
+            "color": "#008000"
+        },
+        {
+            "name": "VENDAS NOVAS",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "VIANA DO ALENTEJO",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "VILA VI\u00c7OSA",
+            "color": "#FFA300"
+        },
+        {
+            "name": "ALBUFEIRA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "ALCOUTIM",
+            "color": "#FFA300"
+        },
+        {
+            "name": "ALJEZUR",
+            "color": "#008000"
+        },
+        {
+            "name": "CASTRO MARIM",
+            "color": "#008000"
+        },
+        {
+            "name": "FARO",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "LAGOA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "LAGOS",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "LOUL\u00c9",
+            "color": "#FFB000"
+        },
+        {
+            "name": "MONCHIQUE",
+            "color": "#8B0000"
+        },
+        {
+            "name": "OLH\u00c3O",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "PORTIM\u00c3O",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "S\u00c3O BR\u00c1S DE ALPORTEL",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "SILVES",
+            "color": "#FFA300"
+        },
+        {
+            "name": "TAVIRA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "VILA DO BISPO",
+            "color": "#008000"
+        },
+        {
+            "name": "VILA REAL DE SANTO ANT\u00d3NIO",
+            "color": "#008000"
+        },
+        {
+            "name": "AGUIAR DA BEIRA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "ALMEIDA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "CELORICO DA BEIRA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "FIGUEIRA DE CASTELO RODRIGO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "FORNOS DE ALGODRES",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "GOUVEIA",
+            "color": "#008000"
+        },
+        {
+            "name": "GUARDA",
+            "color": "#008000"
+        },
+        {
+            "name": "MANTEIGAS",
+            "color": "#8B0000"
+        },
+        {
+            "name": "M\u00caDA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "PINHEL",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "SABUGAL",
+            "color": "#FFB000"
+        },
+        {
+            "name": "SEIA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "TRANCOSO",
+            "color": "#FFB000"
+        },
+        {
+            "name": "VILA NOVA DE FOZ C\u00d4A",
+            "color": "#008000"
+        },
+        {
+            "name": "ALCOBA\u00c7A",
+            "color": "#008000"
+        },
+        {
+            "name": "ALVAI\u00c1ZERE",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "ANSI\u00c3O",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "BATALHA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "BOMBARRAL",
+            "color": "#FFB000"
+        },
+        {
+            "name": "CALDAS DA RAINHA",
+            "color": "#FFB000"
+        },
+        {
+            "name": "CASTANHEIRA DE P\u00caRA",
+            "color": "#008000"
+        },
+        {
+            "name": "FIGUEIR\u00d3 DOS VINHOS",
+            "color": "#FFB000"
+        },
+        {
+            "name": "LEIRIA",
+            "color": "#FFB000"
+        },
+        {
+            "name": "MARINHA GRANDE",
+            "color": "#FFB000"
+        },
+        {
+            "name": "NAZAR\u00c9",
+            "color": "#FFB000"
+        },
+        {
+            "name": "\u00d3BIDOS",
+            "color": "#FFA300"
+        },
+        {
+            "name": "PEDR\u00d3G\u00c3O GRANDE",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "PENICHE",
+            "color": "#FFB000"
+        },
+        {
+            "name": "POMBAL",
+            "color": "#FFA300"
+        },
+        {
+            "name": "PORTO DE M\u00d3S",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "ALENQUER",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "ARRUDA DOS VINHOS",
+            "color": "#8B0000"
+        },
+        {
+            "name": "AZAMBUJA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "CADAVAL",
+            "color": "#FFA300"
+        },
+        {
+            "name": "CASCAIS",
+            "color": "#FFB000"
+        },
+        {
+            "name": "LISBOA",
+            "color": "#008000"
+        },
+        {
+            "name": "LOURES",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "LOURINH\u00c3",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "MAFRA",
+            "color": "#FFB000"
+        },
+        {
+            "name": "OEIRAS",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "SINTRA",
+            "color": "#FFB000"
+        },
+        {
+            "name": "SOBRAL DE MONTE AGRA\u00c7O",
+            "color": "#FFA300"
+        },
+        {
+            "name": "TORRES VEDRAS",
+            "color": "#008000"
+        },
+        {
+            "name": "VILA FRANCA DE XIRA",
+            "color": "#008000"
+        },
+        {
+            "name": "AMADORA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "ODIVELAS",
+            "color": "#FFB000"
+        },
+        {
+            "name": "ALTER DO CH\u00c3O",
+            "color": "#008000"
+        },
+        {
+            "name": "ARRONCHES",
+            "color": "#FFB000"
+        },
+        {
+            "name": "AVIS",
+            "color": "#FFA300"
+        },
+        {
+            "name": "CAMPO MAIOR",
+            "color": "#FFB000"
+        },
+        {
+            "name": "CASTELO DE VIDE",
+            "color": "#FFB000"
+        },
+        {
+            "name": "CRATO",
+            "color": "#FFA300"
+        },
+        {
+            "name": "ELVAS",
+            "color": "#FFB000"
+        },
+        {
+            "name": "FRONTEIRA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "GAVI\u00c3O",
+            "color": "#8B0000"
+        },
+        {
+            "name": "MARV\u00c3O",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "MONFORTE",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "NISA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "PONTE DE SOR",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "PORTALEGRE",
+            "color": "#8B0000"
+        },
+        {
+            "name": "SOUSEL",
+            "color": "#8B0000"
+        },
+        {
+            "name": "AMARANTE",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "BAI\u00c3O",
+            "color": "#8B0000"
+        },
+        {
+            "name": "FELGUEIRAS",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "LOUSADA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "MARCO DE CANAVESES",
+            "color": "#8B0000"
+        },
+        {
+            "name": "MATOSINHOS",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "PA\u00c7OS DE FERREIRA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "PAREDES",
+            "color": "#FFB000"
+        },
+        {
+            "name": "PENAFIEL",
+            "color": "#FFA300"
+        },
+        {
+            "name": "P\u00d3VOA DE VARZIM",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "SANTO TIRSO",
+            "color": "#008000"
+        },
+        {
+            "name": "VALONGO",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "VILA DO CONDE",
+            "color": "#008000"
+        },
+        {
+            "name": "VILA NOVA DE GAIA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "TROFA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "ABRANTES",
+            "color": "#FFB000"
+        },
+        {
+            "name": "ALCANENA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "ALMEIRIM",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "ALPIAR\u00c7A",
+            "color": "#008000"
+        },
+        {
+            "name": "BENAVENTE",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "CARTAXO",
+            "color": "#008000"
+        },
+        {
+            "name": "CHAMUSCA",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "CONST\u00c2NCIA",
+            "color": "#FFA300"
+        },
+        {
+            "name": "CORUCHE",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "ENTRONCAMENTO",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "FERREIRA DO Z\u00caZERE",
+            "color": "#FFA300"
+        },
+        {
+            "name": "GOLEG\u00c3",
+            "color": "#FFB000"
+        },
+        {
+            "name": "MA\u00c7\u00c3O",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "RIO MAIOR",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "SALVATERRA DE MAGOS",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "SANTAR\u00c9M",
+            "color": "#FFA300"
+        },
+        {
+            "name": "SARDOAL",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "TOMAR",
+            "color": "#008000"
+        },
+        {
+            "name": "TORRES NOVAS",
+            "color": "#FFA300"
+        },
+        {
+            "name": "VILA NOVA DA BARQUINHA",
+            "color": "#FFB000"
+        },
+        {
+            "name": "OUR\u00c9M",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "ALC\u00c1CER DO SAL",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "ALCOCHETE",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "ALMADA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "BARREIRO",
+            "color": "#FFB000"
+        },
+        {
+            "name": "GR\u00c2NDOLA",
+            "color": "#008000"
+        },
+        {
+            "name": "MOITA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "MONTIJO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "PALMELA",
+            "color": "#008000"
+        },
+        {
+            "name": "SANTIAGO DO CAC\u00c9M",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "SEIXAL",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "SESIMBRA",
+            "color": "#008000"
+        },
+        {
+            "name": "SET\u00daBAL",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "SINES",
+            "color": "#FFA300"
+        },
+        {
+            "name": "ARCOS DE VALDEVEZ",
+            "color": "#FFB000"
+        },
+        {
+            "name": "CAMINHA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "MELGA\u00c7O",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "MON\u00c7\u00c3O",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "PAREDES DE COURA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "PONTE DA BARCA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "PONTE DE LIMA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "VALEN\u00c7A",
+            "color": "#FFB000"
+        },
+        {
+            "name": "VIANA DO CASTELO",
+            "color": "#FFB000"
+        },
+        {
+            "name": "VILA NOVA DE CERVEIRA",
+            "color": "#FFB000"
+        },
+        {
+            "name": "ALIJ\u00d3",
+            "color": "#8B0000"
+        },
+        {
+            "name": "BOTICAS",
+            "color": "#FFB000"
+        },
+        {
+            "name": "CHAVES",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "MES\u00c3O FRIO",
+            "color": "#008000"
+        },
+        {
+            "name": "MONDIM DE BASTO",
+            "color": "#FFB000"
+        },
+        {
+            "name": "MONTALEGRE",
+            "color": "#A52A2A"
+        },
+        {
+            "name": "MUR\u00c7A",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "PESO DA R\u00c9GUA",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "RIBEIRA DE PENA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "SABROSA",
+            "color": "#008000"
+        },
+        {
+            "name": "VALPA\u00c7OS",
+            "color": "#8B0000"
+        },
+        {
+            "name": "VILA POUCA DE AGUIAR",
+            "color": "#FFB000"
+        },
+        {
+            "name": "VILA REAL",
+            "color": "#8B0000"
+        },
+        {
+            "name": "ARMAMAR",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "CARREGAL DO SAL",
+            "color": "#008000"
+        },
+        {
+            "name": "CASTRO DAIRE",
+            "color": "#8B0000"
+        },
+        {
+            "name": "CINF\u00c3ES",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "LAMEGO",
+            "color": "#8B0000"
+        },
+        {
+            "name": "MANGUALDE",
+            "color": "#FFA300"
+        },
+        {
+            "name": "MOIMENTA DA BEIRA",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "MORT\u00c1GUA",
+            "color": "#FFB000"
+        },
+        {
+            "name": "NELAS",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "OLIVEIRA DE FRADES",
+            "color": "#FFB000"
+        },
+        {
+            "name": "PENALVA DO CASTELO",
+            "color": "#FFB000"
+        },
+        {
+            "name": "PENEDONO",
+            "color": "#008000"
+        },
+        {
+            "name": "RESENDE",
+            "color": "#FFA300"
+        },
+        {
+            "name": "SANTA COMBA D\u00c3O",
+            "color": "#FFA300"
+        },
+        {
+            "name": "S\u00c3O JO\u00c3O DA PESQUEIRA",
+            "color": "#FFA300"
+        },
+        {
+            "name": "S\u00c3O PEDRO DO SUL",
+            "color": "#FFB000"
+        },
+        {
+            "name": "S\u00c1T\u00c3O",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "SERNANCELHE",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "TABUA\u00c7O",
+            "color": "#8B0000"
+        },
+        {
+            "name": "TAROUCA",
+            "color": "#FFB000"
+        },
+        {
+            "name": "TONDELA",
+            "color": "#8B0000"
+        },
+        {
+            "name": "VILA NOVA DE PAIVA",
+            "color": "#008000"
+        },
+        {
+            "name": "VISEU",
+            "color": "#ADFF2F"
+        },
+        {
+            "name": "VOUZELA",
+            "color": "#FFB000"
+        }
+    ]
 }

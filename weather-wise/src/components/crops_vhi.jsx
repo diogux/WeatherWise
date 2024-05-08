@@ -28,6 +28,8 @@ const CropsVHI = ({ location, VHI }) => {
     fontWeight: "bold",
   };
 
+  // transform {vhi} in string
+  const vhi = VHI.toString();
   return (
     <div className="bg-white/50 text-grey" style={divStyle}>
       <table style={tableStyle}>
@@ -42,7 +44,10 @@ const CropsVHI = ({ location, VHI }) => {
             <td style={tdStyle}>
               <strong style={strongStyle}>VHI:</strong>
             </td>
-            <td style={tdStyle2}>{VHI}</td>
+            <td style={tdStyle2}>
+              {/* {VHI} */}
+              <div style={{ color: vhi, backgroundColor: vhi }}>{VHI}</div>
+            </td>
           </tr>
         </tbody>
       </table>
