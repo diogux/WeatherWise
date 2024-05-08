@@ -11,6 +11,8 @@ const TransportRecommendation = ({ weather }) => {
       return "Weather is not ideal for driving. Consider public transport options.";
     } else if (precipitation === 'Low') {
       return "Great weather for a road trip. Enjoy the drive!";
+    } else {
+      return "Consider taking the train or bus instead of driving.";
     }
   };
 
