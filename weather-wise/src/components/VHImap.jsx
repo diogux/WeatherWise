@@ -3,36 +3,17 @@ import { MapContainer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./Map.css";
 import concelhos from "../data/Concelhos.json";
+import concelhoColors from "../data/ConcelhoColors.json";
 
 const VHImap = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [map, setMap] = useState(null);
 
-  const getRandomColor = () => {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
-
-  const mapVHIToColor = (vhi) => {
-    if (vhi < 15) {
-      return "#8B0000"; // Maroon
-    } else if (vhi < 30) {
-      return "#A52A2A"; // Brown
-    } else if (vhi < 45) {
-      return "#FF0000"; // Red
-    } else if (vhi < 60) {
-      return "#FFA500"; // Orange
-    } else if (vhi < 75) {
-      return "#FFFF00"; // Yellow
-    } else if (vhi < 90) {
-      return "#ADFF2F"; // GreenYellow
-    } else {
-      return "#008000"; // Green
-    }
+  const getConcelhoColor = (concelhoName) => {
+    const concelho = concelhoColors.concelhos.find(
+      (concelho) => concelho.name === concelhoName
+    );
+    return concelho ? concelho.color : "#CCCCCC"; // Default color if not found
   };
 
   const styleFunction = (feature) => {
@@ -45,9 +26,7 @@ const VHImap = () => {
         fillOpacity: 0.7,
       };
     }
-    const randomColor = getRandomColor();
-    const vhiValue = Math.floor(Math.random() * 101);
-    const fillColor = mapVHIToColor(vhiValue);
+    const fillColor = getConcelhoColor(feature.properties.Concelho);
     return {
       fillColor: fillColor,
       weight: 1,
