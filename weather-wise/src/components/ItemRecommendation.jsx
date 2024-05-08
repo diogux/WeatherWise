@@ -18,8 +18,8 @@ const ItemRecommendation = ({ weather }) => {
   };
 
   return (
-    <div className="items-box bg-blue-100 p-4 m-4">
-      <h3 className="text-lg font-bold">Items to Pack</h3>
+    <div className="items-box bg-blue-200/80 p-4 rounded-lg w-full mr-4 mb-4">
+      <h3 className="text-lg font-bold">Items to Pack 🎒</h3>
       <p>{getItemsToPack()}</p>
     </div>
   );

@@ -36,7 +36,7 @@ const WeeklyWeatherForecast = ({ location }) => {
   const selectedForecastData = forecastDataByLocation[location] || forecastDataByLocation['Lisboa'];
 
   return (
-    <div className="weekly-forecast-table bg-white/50">
+    <div className="weekly-forecast-table bg-white/70">
       <table>
         <tbody>
           <tr>

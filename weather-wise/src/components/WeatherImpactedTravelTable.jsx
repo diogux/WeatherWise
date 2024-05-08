@@ -5,7 +5,7 @@ const WeatherImpactedTravelTable = ({ weather }) => {
   const { wind, humidity, visibility, precipitation } = weather;
 
   return (
-    <table className="table-auto w-full mt-4">
+    <table className="table rounded-lg w-full bg-blue-200/70 mt-4 ">
       <thead>
         <tr className="bg-gray-200">
           <th>Parameter</th>

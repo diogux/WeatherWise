@@ -10,7 +10,7 @@ const DailyWeatherDetails = ({ location, wind, humidity }) => {
   };
 
   return (
-    <div className="daily-weather-details bg-white/50 text-grey">
+    <div className="daily-weather-details bg-white/70 text-grey">
       <table>
         <tbody>
           <tr>
