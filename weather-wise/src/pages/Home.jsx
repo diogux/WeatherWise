@@ -36,6 +36,12 @@ function Home() {
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3658/3658881.png",
       link: "/crops",
       component: (props) => <Link to={props.link}><Card {...props} /></Link>
+    },
+    'Travel': {
+      description: "Tips for your travel plans",
+      imageSrc: "https://cdn-icons-png.flaticon.com/128/870/870194.png",
+      link: "/travel",
+      component: (props) => <Link to={props.link}><Card {...props} /></Link>
     }
   };
 

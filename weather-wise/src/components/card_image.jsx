@@ -3,7 +3,7 @@ import './card.css';
 
 function Card({ name, imageSrc, github_url}) {
   return (
-    <div className="card w-70 h-70 bg-white/30 shadow-xl pt-3">
+    <div className="card w-70 h-70 bg-white/50 shadow-xl pt-3">
       <figure><img src={imageSrc} style={{ maxWidth: '190px', maxHeight: '190px'}} alt={name} /></figure>
       <div className="card-body items-center">
         <h2 className="card-title text-black">{name}</h2>
