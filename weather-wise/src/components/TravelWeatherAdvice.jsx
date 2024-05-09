@@ -19,7 +19,7 @@ const TravelWeatherAdvice = ({ location, weather }) => {
   };
 
   return (
-    <div className="advice-box rounded-lg bg-blue-200/70 p-4 w-full mr-4 mb-4 mt-5">
+    <div className="advice-box rounded-lg bg-white/70 p-4 w-full mr-4 mb-4 mt-5">
       <h3 className="text-lg font-bold">Travel Advice for {location} 📌</h3>
       <p>{getAdvice()}</p>
     </div>

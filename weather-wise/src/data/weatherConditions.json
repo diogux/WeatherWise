@@ -1,0 +1,131 @@
+{
+    "districts": [
+      {
+        "id": "Lisboa",
+        "humidity": 70,
+        "visibility": "Good",
+        "precipitation": "Low",
+        "wind": 15
+      },
+      {
+        "id": "Porto",
+        "humidity": 80,
+        "visibility": "Moderate",
+        "precipitation": "High",
+        "wind": 20
+      },
+      {
+        "id": "Faro",
+        "humidity": 50,
+        "visibility": "Poor",
+        "precipitation": "None",
+        "wind": 10
+      },
+      {
+        "id": "Aveiro",
+        "humidity": 78,
+        "visibility": "Good",
+        "precipitation": "Moderate",
+        "wind": 12
+      },
+      {
+        "id": "Braga",
+        "humidity": 85,
+        "visibility": "Moderate",
+        "precipitation": "High",
+        "wind": 18
+      },
+      {
+        "id": "Viana do Castelo",
+        "humidity": 81,
+        "visibility": "Good",
+        "precipitation": "Low",
+        "wind": 13
+      },
+      {
+        "id": "Vila Real",
+        "humidity": 60,
+        "visibility": "Moderate",
+        "precipitation": "None",
+        "wind": 14
+      },
+      {
+        "id": "Bragança",
+        "humidity": 50,
+        "visibility": "Poor",
+        "precipitation": "Low",
+        "wind": 16
+      },
+      {
+        "id": "Guarda",
+        "humidity": 82,
+        "visibility": "Good",
+        "precipitation": "High",
+        "wind": 20
+      },
+      {
+        "id": "Viseu",
+        "humidity": 70,
+        "visibility": "Moderate",
+        "precipitation": "Moderate",
+        "wind": 11
+      },
+      {
+        "id": "Coimbra",
+        "humidity": 81,
+        "visibility": "Good",
+        "precipitation": "Low",
+        "wind": 12
+      },
+      {
+        "id": "Castelo Branco",
+        "humidity": 55,
+        "visibility": "Moderate",
+        "precipitation": "None",
+        "wind": 10
+      },
+      {
+        "id": "Leiria",
+        "humidity": 68,
+        "visibility": "Good",
+        "precipitation": "High",
+        "wind": 15
+      },
+      {
+        "id": "Santarém",
+        "humidity": 77,
+        "visibility": "Moderate",
+        "precipitation": "Moderate",
+        "wind": 9
+      },
+      {
+        "id": "Évora",
+        "humidity": 60,
+        "visibility": "Poor",
+        "precipitation": "Low",
+        "wind": 14
+      },
+      {
+        "id": "Setúbal",
+        "humidity": 65,
+        "visibility": "Good",
+        "precipitation": "None",
+        "wind": 17
+      },
+      {
+        "id": "Beja",
+        "humidity": 30,
+        "visibility": "Moderate",
+        "precipitation": "High",
+        "wind": 8
+      },
+      {
+        "id": "Portalegre",
+        "humidity": 37,
+        "visibility": "Good",
+        "precipitation": "Moderate",
+        "wind": 19
+      }
+    ]
+  }
+  

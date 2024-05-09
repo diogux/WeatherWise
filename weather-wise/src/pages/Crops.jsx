@@ -112,7 +112,7 @@ function Crops() {
 
   const InfoCardVHI = () => {
     return (
-      <div className="info-card bg-white/50 p-4 rounded-lg">
+      <div className="info-card bg-white/70 p-4 rounded-lg">
         <div className="flex flex-col items-center">
           {" "}
           {/* Flex column layout */}
@@ -135,7 +135,7 @@ function Crops() {
 
   const InfoCardPWS = () => {
     return (
-      <div className="info-card bg-white/50 p-4 rounded-lg">
+      <div className="info-card bg-white/70 p-4 rounded-lg">
         <div className="flex flex-col items-center">
           {" "}
           {/* Flex column layout */}
@@ -145,14 +145,8 @@ function Crops() {
             <FaInfoCircle size={24} color="#black" /> {/* Information icon */}
           </div>
           <p className="text-gray-900 text-center">
-            {/* Information paragraph */}O Soil Moisture Index (SMI) do ECMWF é
-            um indicador da umidade do solo disponível para as plantas, com
-            resolução de 16 km. Ele varia entre os pontos de emurchecimento
-            permanente (PWP) e a capacidade de campo (FC), com eficiência de
-            evaporação crescente. O índice é representado em tons de laranja
-            escuro quando abaixo do PWP, entre laranja e azul para valores
-            intermediários, e azul escuro quando acima da FC. O mapa usa as
-            fronteiras das DRAP.
+            {/* Information paragraph */}
+              The Soil Moisture Index (SMI) from ECMWF is an indicator of the soil moisture available for plants, with a resolution of 16 km. It varies between the permanent wilting point (PWP) and field capacity (FC), with increasing evaporation efficiency. The index is represented in dark orange tones when below the PWP, between orange and blue for intermediate values, and dark blue when above the FC. The map uses the boundaries of the DRAPs.
           </p>
         </div>
       </div>
@@ -175,7 +169,7 @@ function Crops() {
               <select
                 value={selectedFilter}
                 onChange={handleFilterChange}
-                className="border border-gray-300 rounded-md py-2 px-3 mb-2 block w-full appearance-none bg-black/20"
+                className="border border-gray-300 rounded-md py-2 px-3 mb-2 block w-full appearance-none bg-white/50"
               >
                 {filterOptions.map((option) => (
                   <option key={option.value} value={option.value}>

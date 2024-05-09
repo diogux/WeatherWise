@@ -35,7 +35,7 @@ const CropsVHI = ({ location, VHI }) => {
     vhi = "#008000";
   }
   return (
-    <div className="bg-white/50 text-grey" style={divStyle}>
+    <div className="bg-white/70 text-grey" style={divStyle}>
       <table style={tableStyle}>
         <tbody>
           <tr>

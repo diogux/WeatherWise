@@ -1,13 +1,14 @@
-// components/WeatherImpactedTravelTable.jsx
 import React from 'react';
+import weatherData from '../data/weatherConditions.json';
 
-const WeatherImpactedTravelTable = ({ weather }) => {
-  const { wind, humidity, visibility, precipitation } = weather;
+const WeatherImpactedTravelTable = ({weather}) => {
+  // For demo, assuming you want to always display the first district's weather
+  const { humidity, visibility, precipitation, wind } = weather;
 
   return (
-    <table className="table rounded-lg w-full bg-blue-200/70 mt-4 ">
+    <table className="table rounded bg-white/70 mt-4 ">
       <thead>
-        <tr className="bg-gray-200">
+        <tr className="bg-black/80">
           <th>Parameter</th>
           <th>Value</th>
         </tr>
@@ -15,7 +16,7 @@ const WeatherImpactedTravelTable = ({ weather }) => {
       <tbody>
         <tr>
           <td>Wind</td>
-          <td>{wind} km/h</td>
+          <td>{wind} km</td> {/* Wind data might not be in the JSON, show a placeholder */}
         </tr>
         <tr>
           <td>Humidity</td>
