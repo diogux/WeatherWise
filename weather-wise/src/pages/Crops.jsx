@@ -117,10 +117,10 @@ function Crops() {
         <div className="py-10">
           <h2 className="text-4xl font-bold text-gray-800">Crops</h2>
         </div>
-        <div className="flex">
+        <div className="flex justify-between">
           {" "}
           {/* Aligns legend and map */}
-          <div className="w-1/4" style={{ paddingRight: "0px" }}>
+          <div className="w-1/3" style={{ paddingRight: "0px" }}>
             {/* Step 4: Add filter menu */}
             <div>
               <select

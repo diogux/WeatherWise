@@ -589,6 +589,22 @@
             "color": "#ADFF2F"
         },
         {
+            "name": "GONDOMAR",
+            "color": "#FFFF00"
+        },
+            {"name": "MAIA",
+            "color": "#FFB000"
+        },
+        {
+            "name" : "SANTA MARTA DE PENAGUIÃO",
+            "color" : "#FFA300"
+        },
+
+        {
+            "name": "PORTO",
+            "color": "#FFA300"
+        },
+        {
             "name": "ALENQUER",
             "color": "#A52A2A"
         },
