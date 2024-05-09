@@ -6,14 +6,13 @@ import SearchMap from "@/components/search_map_concelhos";
 import PWSmap from "@/components/PWSmap";
 import CropsVHI from "@/components/crops_vhi";
 import ConcelhoColors from "../data/ConcelhoColors.json";
-import { FaInfoCircle } from 'react-icons/fa';
+import { FaInfoCircle } from "react-icons/fa";
 
 function Crops() {
   // Step 1: Define filter options
   const filterOptions = [
     { label: "Vegetation Health Index", value: "VHI" },
     { label: "Percentage of water in the soil", value: "PWS" },
-    { label: "Number of cold hours", value: "NCH" },
     // Add more options as needed
   ];
 
@@ -114,13 +113,20 @@ function Crops() {
   const InfoCardVHI = () => {
     return (
       <div className="info-card bg-white/50 p-4 rounded-lg">
-        <div className="flex flex-col items-center"> {/* Flex column layout */}
-          <div className="mb-4"> {/* Add margin-bottom */}
+        <div className="flex flex-col items-center">
+          {" "}
+          {/* Flex column layout */}
+          <div className="mb-4">
+            {" "}
+            {/* Add margin-bottom */}
             <FaInfoCircle size={24} color="#black" /> {/* Information icon */}
           </div>
           <p className="text-gray-600 text-center">
             {/* Information paragraph */}
-            The VHI, a product of NOAA/NESDIS, amalgamates multiple vegetation-related sub-indices derived from satellite observations. It offers timely and spatially consistent data, vital for detecting and monitoring drought and wildfire risks.
+            The VHI, a product of NOAA/NESDIS, amalgamates multiple
+            vegetation-related sub-indices derived from satellite observations.
+            It offers timely and spatially consistent data, vital for detecting
+            and monitoring drought and wildfire risks.
           </p>
         </div>
       </div>
@@ -130,13 +136,23 @@ function Crops() {
   const InfoCardPWS = () => {
     return (
       <div className="info-card bg-white/50 p-4 rounded-lg">
-        <div className="flex flex-col items-center"> {/* Flex column layout */}
-          <div className="mb-4"> {/* Add margin-bottom */}
+        <div className="flex flex-col items-center">
+          {" "}
+          {/* Flex column layout */}
+          <div className="mb-4">
+            {" "}
+            {/* Add margin-bottom */}
             <FaInfoCircle size={24} color="#black" /> {/* Information icon */}
           </div>
-          <p className="text-gray-600 text-center">
-            {/* Information paragraph */}
-            O Soil Moisture Index (SMI) do ECMWF é um indicador da umidade do solo disponível para as plantas, com resolução de 16 km. Ele varia entre os pontos de emurchecimento permanente (PWP) e a capacidade de campo (FC), com eficiência de evaporação crescente. O índice é representado em tons de laranja escuro quando abaixo do PWP, entre laranja e azul para valores intermediários, e azul escuro quando acima da FC. O mapa usa as fronteiras das DRAP.
+          <p className="text-gray-900 text-center">
+            {/* Information paragraph */}O Soil Moisture Index (SMI) do ECMWF é
+            um indicador da umidade do solo disponível para as plantas, com
+            resolução de 16 km. Ele varia entre os pontos de emurchecimento
+            permanente (PWP) e a capacidade de campo (FC), com eficiência de
+            evaporação crescente. O índice é representado em tons de laranja
+            escuro quando abaixo do PWP, entre laranja e azul para valores
+            intermediários, e azul escuro quando acima da FC. O mapa usa as
+            fronteiras das DRAP.
           </p>
         </div>
       </div>
@@ -168,17 +184,19 @@ function Crops() {
                 ))}
               </select>
             </div>
-
             {/* Step 5: Conditional rendering based on selected filter */}
             {selectedFilter === "VHI" && VHIfilter}
             {selectedFilter === "PWS" && PWSfilter}
-
-            {selectedFilter === "VHI" && <CropsVHI location={selectedLocation} VHI={VHI} />} {/* Render CropsVHI component only when VHI filter is selected */}
-
-            {selectedFilter === "VHI" && <InfoCardVHI />} {/* Render VHI InfoCard only when VHI filter is selected */}
-            {selectedFilter === "PWS" && <InfoCardPWS />} {/* Render PWS InfoCard only when PWS filter is selected */}
-            
-            
+            {selectedFilter === "VHI" && (
+              <CropsVHI location={selectedLocation} VHI={VHI} />
+            )}{" "}
+            <div className="flex justify-left pt-10">
+              {/* Render CropsVHI component only when VHI filter is selected */}
+              {selectedFilter === "VHI" && <InfoCardVHI />}{" "}
+              {/* Render VHI InfoCard only when VHI filter is selected */}
+              {selectedFilter === "PWS" && <InfoCardPWS />}{" "}
+              {/* Render PWS InfoCard only when PWS filter is selected */}
+            </div>
           </div>
           <div className="w-1/2 pl-20">
             {" "}
