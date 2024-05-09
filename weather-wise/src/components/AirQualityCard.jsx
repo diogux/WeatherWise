@@ -1,6 +1,6 @@
 const AirQualityCard = ({ pollutants }) => {
   return (
-    <div className="air-quality-card weekly-forecast-table grow bg-white/50">
+    <div className="air-quality-card weekly-forecast-table grow bg-white/70">
       <table>
         <tbody>
           <tr>

@@ -14,7 +14,7 @@ function Health() {
 
   const InfoCard = ({ text }) => {
     return (
-      <div className="info-card bg-white/50 p-4 rounded-lg">
+      <div className="info-card bg-white/70 p-4 rounded-lg">
         <div className="flex flex-col items-center">
           {" "}
           {/* Flex column layout */}
@@ -77,7 +77,7 @@ function Health() {
             {" "}
             {/* Left side for the table */}
             <div className="flex justify-left">
-              <div className="weekly-forecast-table w-1/6 grow bg-white/50">
+              <div className="weekly-forecast-table w-1/6 grow bg-white/70">
                 <div className="day text-grey text">
                   Current Air Quality: GOOD
                 </div>
