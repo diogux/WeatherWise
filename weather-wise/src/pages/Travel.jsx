@@ -60,7 +60,9 @@ function Travel() {
             />
             <ItemRecommendation weather={weatherConditions} />
             <TransportRecommendation weather={weatherConditions} />
-            <WeatherImpactedTravelTable weather={weatherConditions} />
+            <div style={{ paddingTop: "100px" }}>
+              <WeatherImpactedTravelTable weather={weatherConditions} />
+            </div>
           </div>
           <div className="w-1/2 pl-4">
             <div className="mb-2 mt-9">
