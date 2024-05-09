@@ -89,17 +89,17 @@ function Crops() {
 
   const PWSfilter = (
     <div className="border border-gray-300 rounded-md overflow-hidden">
-      <table>
+      <table style={{ width: "100%" }}>
         <tbody>
           {PWSItems.map((item, index) => (
             <tr key={index}>
               <td
-                className="legend-item w-7"
-                style={{ backgroundColor: item.color }}
+                className="legend-item "
+                style={{ backgroundColor: item.color, width: "50%" }}
               ></td>
               <td
-                className="legend-item"
-                style={{ backgroundColor: "#FFFFFF" }}
+                className="legend-item bg-white/50 border"
+                style={{ width: "50%", textAlign: "center" }}
               >
                 {item.range}
               </td>

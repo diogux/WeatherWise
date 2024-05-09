@@ -4,6 +4,16 @@ import { Input } from "@/components/ui/input";
 import wordsData from "../data/ConcelhosApenas.json";
 
 export default function SearchBar({ placeholder, onLocationChange }) {
+  // Function to remove diacritics from a string
+  const removeDiacritics = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  };
+
+  // Create an array of words without diacritics
+  const wordsWithoutDiacritics = wordsData.map((word) =>
+    removeDiacritics(word)
+  );
+
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleInputChange = (event) => {
@@ -11,7 +21,9 @@ export default function SearchBar({ placeholder, onLocationChange }) {
   };
 
   const filteredWords = wordsData.filter((word) =>
-    word.toLowerCase().includes(searchTerm.toLowerCase())
+    removeDiacritics(word.toLowerCase()).includes(
+      removeDiacritics(searchTerm.toLowerCase())
+    )
   );
 
   const handleKeyPress = (event) => {
@@ -24,7 +36,9 @@ export default function SearchBar({ placeholder, onLocationChange }) {
   const handleSearch = () => {
     // Check if the searchTerm exists in the wordsData array
     const foundWord = wordsData.find(
-      (word) => word.toLowerCase() === searchTerm.toLowerCase()
+      (word) =>
+        removeDiacritics(word.toLowerCase()) ===
+        removeDiacritics(searchTerm.toLowerCase())
     );
 
     if (foundWord) {
@@ -38,7 +52,6 @@ export default function SearchBar({ placeholder, onLocationChange }) {
   const handleClear = () => {
     setSearchTerm("");
   };
-
   return (
     <div className="flex items-center space-x-2">
       <Input
@@ -51,7 +64,7 @@ export default function SearchBar({ placeholder, onLocationChange }) {
         placeholder={placeholder}
       />
       <datalist id="words">
-        {filteredWords.map((word, index) => (
+        {wordsWithoutDiacritics.map((word, index) => (
           <option key={index} value={word} />
         ))}
       </datalist>

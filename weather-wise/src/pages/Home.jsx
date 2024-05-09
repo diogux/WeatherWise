@@ -1,48 +1,64 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
-import Navbar from '../components/navbar';
-import Search from '../components/search';
-import Card from '../components/card';
-import Rain from '../components/rain';
-import Card_Modal from '../components/card_modal';
-import Advice_Modal from '../components/advice_modal';
-import { useCardOrder } from '../components/CardOrderContext'; // Make sure this import path is correct
-import SheetDemo from '../components/sheet';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
+import Navbar from "../components/navbar";
+import Search from "../components/search";
+import Card from "../components/card";
+import Rain from "../components/rain";
+import Card_Modal from "../components/card_modal";
+import Advice_Modal from "../components/advice_modal";
+import { useCardOrder } from "../components/CardOrderContext"; // Make sure this import path is correct
+import SheetDemo from "../components/sheet";
 
 function Home() {
   const { cardOrder } = useCardOrder();
 
   const cardConfig = {
-    'Forecast': {
+    Forecast: {
       description: "Weather forecast for the week",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/1163/1163661.png",
       link: "/forecast",
-      component: (props) => <Link to={props.link}><Card {...props} /></Link>
+      component: (props) => (
+        <Link to={props.link}>
+          <Card {...props} />
+        </Link>
+      ),
     },
-    'Daily Advice': {
+    "Daily Advice": {
       description: "Advice and tips for your activities",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/834/834768.png",
-      component: (props) => <Advice_Modal {...props} />
+      component: (props) => <Advice_Modal {...props} />,
     },
-    'Health': {
+    Health: {
       description: "Health-related information",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3004/3004458.png",
       link: "/health",
-      component: (props) => <Link to={props.link}><Card {...props} /></Link>
+      component: (props) => (
+        <Link to={props.link}>
+          <Card {...props} />
+        </Link>
+      ),
     },
-    'Crops': {
+    Crops: {
       description: "Recommendations for your garden",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3658/3658881.png",
       link: "/crops",
-      component: (props) => <Link to={props.link}><Card {...props} /></Link>
+      component: (props) => (
+        <Link to={props.link}>
+          <Card {...props} />
+        </Link>
+      ),
     },
-    'Travel': {
+    Travel: {
       description: "Tips for your travel plans",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/870/870194.png",
       link: "/travel",
-      component: (props) => <Link to={props.link}><Card {...props} /></Link>
-    }
+      component: (props) => (
+        <Link to={props.link}>
+          <Card {...props} />
+        </Link>
+      ),
+    },
   };
 
   return (
@@ -56,11 +72,11 @@ function Home() {
         <h2 className="text-1xl font-bold mb-6 text-grey">23°C | 17°C </h2>
         <Search placeholder="Is it going to rain?" />
       </div>
-      <div className='flex flex-col justify-end items-end mr-20 mb-5'>
-      <SheetDemo></SheetDemo>
+      <div className="flex flex-col justify-end items-end mr-20 mb-5">
+        <SheetDemo></SheetDemo>
       </div>
       <div className="flex justify-around mb-40 card-container">
-        {cardOrder.map(cardName => {
+        {cardOrder.map((cardName) => {
           const config = cardConfig[cardName];
           if (!config) {
             console.error(`Configuration not found for card: ${cardName}`);
@@ -68,7 +84,13 @@ function Home() {
           }
 
           // Render the appropriate component based on the configuration
-          return config.component({ key: cardName, name: cardName, description: config.description, imageSrc: config.imageSrc, link: config.link });
+          return config.component({
+            key: cardName,
+            name: cardName,
+            description: config.description,
+            imageSrc: config.imageSrc,
+            link: config.link,
+          });
         })}
       </div>
     </div>
