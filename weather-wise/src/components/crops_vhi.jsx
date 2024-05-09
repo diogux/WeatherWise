@@ -29,7 +29,11 @@ const CropsVHI = ({ location, VHI }) => {
   };
 
   // transform {vhi} in string
-  const vhi = VHI.toString();
+  let vhi = VHI.toString();
+
+  if (vhi === "") {
+    vhi = "#008000";
+  }
   return (
     <div className="bg-white/50 text-grey" style={divStyle}>
       <table style={tableStyle}>
@@ -46,7 +50,7 @@ const CropsVHI = ({ location, VHI }) => {
             </td>
             <td style={tdStyle2}>
               {/* {VHI} */}
-              <div style={{ color: vhi, backgroundColor: vhi }}>{VHI}</div>
+              <div style={{ color: vhi, backgroundColor: vhi }}>easter egg</div>
             </td>
           </tr>
         </tbody>

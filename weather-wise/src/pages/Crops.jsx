@@ -17,7 +17,7 @@ function Crops() {
   ];
 
   const [selectedLocation, setSelectedLocation] = useState("Aveiro");
-  const [VHI, setVHI] = useState("some state :)"); // Initialize VHI state
+  const [VHI, setVHI] = useState(""); // Initialize VHI state
 
   const handleLocationChange = (location) => {
     setSelectedLocation(location);
@@ -62,17 +62,21 @@ function Crops() {
   // Step 4: Define legend content based on selected filter
   const VHIfilter = (
     <div className="border border-gray-300 rounded-md overflow-hidden">
-      <table>
+      <table style={{ width: "100%" }}>
         <tbody>
           {VHIItems.map((item, index) => (
             <tr key={index}>
               <td
-                className="legend-item w-7"
-                style={{ backgroundColor: item.color }}
+                className="legend-item"
+                style={{ backgroundColor: item.color, width: "50%" }}
               ></td>
               <td
-                className="legend-item"
-                style={{ backgroundColor: "#FFFFFF" }}
+                className="legend-item bg-white/50 border"
+                style={{
+                  width: "50%",
+                  textAlign: "center",
+                  // backgroundColor: "#FFFFFF",
+                }}
               >
                 {item.range}
               </td>
