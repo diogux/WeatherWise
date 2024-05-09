@@ -79,6 +79,10 @@ const TravelMap = () => {
       <select
         onChange={(e) => setSelectedCondition(e.target.value)}
         value={selectedCondition}
+      >
+      <select
+        onChange={(e) => setSelectedCondition(e.target.value)}
+        value={selectedCondition}
         className="border border-gray-300 rounded-md py-2 px-3 mb-2 block w-10% appearance-none bg-white/50"
         style={{
           backgroundImage:
