@@ -1,26 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, GeoJSON, SVGOverlay, ScaleControl } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import distritos from '../data/Portugal.json';
+import React, { useEffect, useState } from "react";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  GeoJSON,
+  SVGOverlay,
+  ScaleControl,
+} from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import distritos from "../data/Portugal.json";
 
-const HealthMap = ({ uvIndexData }) => { // Pass UV index data as a prop
-  const [searchTerm, setSearchTerm] = useState('');
+const HealthMap = ({ uvIndexData }) => {
+  // Pass UV index data as a prop
+  const [searchTerm, setSearchTerm] = useState("");
   const [map, setMap] = useState(null);
 
   // Define UV index levels and corresponding colors
   const uvLevels = {
-    'Unavailable': '#808080',
-    'Low': '#00FF00',
-    'Moderate': '#FFFF00',
-    'High': '#FFA500',
-    'Very High': '#FF0000',
-    'Extreme': '#800080'
+    Unavailable: "#808080",
+    Low: "#00FF00",
+    Moderate: "#FFFF00",
+    High: "#FFA500",
+    "Very High": "#FF0000",
+    Extreme: "#800080",
   };
 
   const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
+    const letters = "0123456789ABCDEF";
+    let color = "#";
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
@@ -29,15 +38,15 @@ const HealthMap = ({ uvIndexData }) => { // Pass UV index data as a prop
 
   const UVtocolor = (vhi) => {
     if (vhi < 15) {
-      return '#800080'; // Maroon
+      return "#800080"; // Maroon
     } else if (vhi < 45) {
-      return '#FF0000'; // Red
+      return "#FF0000"; // Red
     } else if (vhi < 60) {
-      return '#FFA500'; // Orange
+      return "#FFA500"; // Orange
     } else if (vhi < 75) {
-      return '#FFFF00'; // Yellow
+      return "#FFFF00"; // Yellow
     } else {
-      return '#008000'; // Green
+      return "#008000"; // Green
     }
   };
 
@@ -49,8 +58,8 @@ const HealthMap = ({ uvIndexData }) => { // Pass UV index data as a prop
       fillColor: fillColor,
       weight: 1,
       opacity: 1,
-      color: 'white',
-      fillOpacity: 0.7
+      color: "white",
+      fillOpacity: 0.7,
     };
   };
 
@@ -63,7 +72,7 @@ const HealthMap = ({ uvIndexData }) => { // Pass UV index data as a prop
         },
         mouseout: (e) => {
           layer.closeTooltip();
-        }
+        },
       });
     }
   };
@@ -79,7 +88,13 @@ const HealthMap = ({ uvIndexData }) => { // Pass UV index data as a prop
         <tbody>
           {Object.entries(uvLevels).map(([level, color]) => (
             <tr key={level}>
-              <td style={{ backgroundColor: color, width: '20px', height: '20px' }}></td>
+              <td
+                style={{
+                  backgroundColor: color,
+                  width: "20px",
+                  height: "20px",
+                }}
+              ></td>
               <td>{level}</td>
             </tr>
           ))}
@@ -88,19 +103,55 @@ const HealthMap = ({ uvIndexData }) => { // Pass UV index data as a prop
     );
   };
 
+  const renderTitle = () => {
+    return (
+      <div className="title">
+        <h1>UV Index Map</h1>
+      </div>
+    );
+  };
+
   return (
     <div>
       <MapContainer
         center={[39.3999, -8.2245]}
         zoom={6.5}
-        style={{ height: '70vh', position: 'relative' }} // Position relative for containing the UV scale
+        style={{ height: "70vh", position: "relative" }} // Position relative for containing the UV scale
         dragging={false}
         zoomControl={false}
         whenCreated={setMap}
       >
-        <GeoJSON data={distritos.features} onEachFeature={onEachCity} style={styleFunction} />
-        <div className="uv-scale" style={{ position: 'absolute', bottom: '10px', right: '10px', backgroundColor: 'white', padding: '5px', borderRadius: '5px' }}>
+        <GeoJSON
+          data={distritos.features}
+          onEachFeature={onEachCity}
+          style={styleFunction}
+        />
+        <div
+          className="uv-scale"
+          style={{
+            position: "absolute",
+            bottom: "10px",
+            right: "10px",
+            backgroundColor: "white",
+            padding: "5px",
+            borderRadius: "5px",
+          }}
+        >
           {renderLegend()}
+        </div>
+
+        <div
+          className="title"
+          style={{
+            position: "absolute",
+            top: "10px",
+            left: "10px",
+            backgroundColor: "white",
+            padding: "5px",
+            borderRadius: "5px",
+          }}
+        >
+          {renderTitle()}
         </div>
       </MapContainer>
     </div>
