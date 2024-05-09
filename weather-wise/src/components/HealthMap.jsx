@@ -71,7 +71,11 @@ const HealthMap = ({ uvIndexData }) => { // Pass UV index data as a prop
   const renderLegend = () => {
     return (
       <table className="legend">
-        <caption>UV Index Levels</caption>
+        <caption>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ marginLeft: '5px' }}>UV Index Levels</span> {/* Caption */}
+          </div>
+        </caption>
         <tbody>
           {Object.entries(uvLevels).map(([level, color]) => (
             <tr key={level}>
