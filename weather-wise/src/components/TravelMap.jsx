@@ -68,7 +68,7 @@ const TravelMap = () => {
     return {
       fillColor: mapConditionToColor(conditionValue),
       weight: 1,
-      opacity: 1,
+      opacity: 1,1
       color: "white",
       fillOpacity: 0.7,
     };
