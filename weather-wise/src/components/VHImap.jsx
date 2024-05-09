@@ -63,7 +63,7 @@ const VHImap = () => {
       <MapContainer
         center={[39.3999, -8.2245]}
         zoom={6.5}
-        style={{ height: "70vh" }}
+        style={{ height: "70vh" , position: 'relative'}}
         dragging={true}
         whenCreated={setMap}
       >
