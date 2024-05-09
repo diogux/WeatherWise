@@ -1,8 +1,9 @@
 import '../App.css'
 import Navbar from '../components/navbar'
-import ForecastMap from '../components/ForecastMap'
+import HealthMap from '../components/HealthMap'
 import SearchMap from '../components/search_map'
 import AirQualityCard from '../components/AirQualityCard'
+import { FaInfoCircle } from 'react-icons/fa';
 
 function Health() {
 
@@ -11,6 +12,23 @@ const pollutants = [
   { name: "NO", measurement: "354g/m³", status: "Good" },
   { name: "PM10", measurement: "103/m³", status: "Poor" },
 ];
+
+const InfoCard = ({ text }) => {
+  return (
+    <div className="info-card bg-white/50 p-4 rounded-lg">
+      <div className="flex flex-col items-center"> {/* Flex column layout */}
+        <div className="mb-4"> {/* Add margin-bottom */}
+          <FaInfoCircle size={24} color="#black" /> {/* Information icon */}
+        </div>
+        <p className="text-gray-600 text-center">
+          {/* Information paragraph */}
+          PMS (Particulate Matter): PMS refers to solid or liquid particles suspended in the air, originating from various sources such as vehicle emissions and wildfires. These particles can cause respiratory issues and impact air quality. <br /> NO (Nitrogen Oxide): NO is a pollutant gas primarily produced by the burning of fossil fuels, such as those used in vehicles and power plants. It contributes to the formation of smog and acid rain, as well as respiratory problems. <br />PM10 (Particulate Matter 10): PM10 refers to solid or liquid particles with a diameter of 10 micrometers or smaller, easily inhaled into the human respiratory system. They can cause irritation to the eyes, nose, and throat, as well as more serious respiratory issues.
+        </p>
+      </div>
+    </div>
+  );
+};
+
 
 
 
@@ -56,6 +74,9 @@ const pollutants = [
                 <AirQualityCard pollutants={pollutants} />
             </div>
 
+            <div className="flex justify-left pt-10">
+              <InfoCard/>
+            </div>
 
           </div>
 
@@ -63,7 +84,7 @@ const pollutants = [
             <div className="mb-2"> {/* Add margin-bottom to the search */}
               <SearchMap placeholder="Search for a location" />
             </div>
-            <ForecastMap />
+            <HealthMap />
           </div>
 
         </div>
