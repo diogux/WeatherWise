@@ -52,11 +52,11 @@ const TravelMap = () => {
 
   return (
     <div>
-      <select onChange={(e) => setSelectedCondition(e.target.value)} value={selectedCondition}>
-        <option value="humidity">Humidity</option>
-        <option value="visibility">Visibility</option>
-        <option value="precipitation">Precipitation</option>
-      </select>
+     <select onChange={(e) => setSelectedCondition(e.target.value)} value={selectedCondition} className="border border-gray-300 rounded-md py-2 px-3 mb-2 block w-10% appearance-none bg-white/50" style={{ backgroundImage: 'url("data:image/svg+xml,%3csvg fill=\'%239DA5AB\' xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath d=\'M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z\'/%3e%3c/svg%3e"), linear-gradient(transparent, transparent), linear-gradient(transparent, transparent)', backgroundPosition: 'right 0.7em top 50%, 0 0', backgroundRepeat: 'no-repeat', backgroundSize: '1.2em auto, 100%' }}>
+      <option value="humidity">Humidity</option>
+      <option value="visibility">Visibility</option>
+      <option value="precipitation">Precipitation</option>
+     </select>
       <MapContainer center={[39.3999, -8.2245]} zoom={6.5} style={{ height: '70vh' }} whenCreated={setMap}>
         <GeoJSON data={distritos.features} style={styleFunction} onEachFeature={onEachCity} />
       </MapContainer>
