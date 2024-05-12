@@ -118,7 +118,6 @@ const HealthMap = ({ uvIndexData }) => {
         zoom={6.5}
         style={{ height: "70vh", position: "relative" }} // Position relative for containing the UV scale
         dragging={false}
-        zoomControl={false}
         whenCreated={setMap}
       >
         <GeoJSON
@@ -145,7 +144,7 @@ const HealthMap = ({ uvIndexData }) => {
           style={{
             position: "absolute",
             top: "10px",
-            left: "10px",
+            left: "55px",
             backgroundColor: "white",
             padding: "5px",
             borderRadius: "5px",

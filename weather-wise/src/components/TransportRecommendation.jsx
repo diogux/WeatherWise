@@ -17,7 +17,7 @@ const TransportRecommendation = ({ weather }) => {
   };
 
   return (
-    <div className="transport-box rounded-lg bg-white/70 p-4 w-full mr-4">
+    <div className="transport-box text-gray-700 rounded-lg bg-white/70 p-4 w-full mr-4">
       <h3 className="text-lg font-bold">Recommended Mode of Transport 🚅</h3>
       <p>{getTransportAdvice()}</p>
     </div>

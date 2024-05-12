@@ -10,7 +10,7 @@ const WeatherImpactedTravelTable = ({ weather }) => {
   };
 
   return (
-    <table className="table rounded bg-white/70 mt-4">
+    <table className="table rounded-lg bg-white/70 mt-4">
       <thead>
         <tr className="bg-black/80">
           <th>Parameter</th>

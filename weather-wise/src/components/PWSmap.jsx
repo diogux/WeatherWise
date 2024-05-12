@@ -45,6 +45,14 @@ const PWSmap = () => {
     });
   };
 
+  const renderTitle = () => {
+    return (
+      <div className="title">
+        <h1>PWS Map</h1>
+      </div>
+    );
+  };
+
   return (
     <div>
       <MapContainer
@@ -59,6 +67,18 @@ const PWSmap = () => {
     weight: 1 // Slimmer line weight
   })}/>
         {createRectangles()}
+        <div
+          className="title"
+          style={{
+            position: "absolute",
+            top: "10px",
+            left: "55px",
+            backgroundColor: "white",
+            padding: "5px",
+            borderRadius: "5px",
+          }}
+        >{renderTitle()}
+        </div>
       </MapContainer>
     </div>
   );

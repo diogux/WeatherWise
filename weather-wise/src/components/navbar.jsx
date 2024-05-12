@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil, faTriangleExclamation, faCloud, faCloudRain } from '@fortawesome/free-solid-svg-icons';
 import Clock from './clock';
-import './navbar.css';
-import Navigation_Menu from './navigation_menu';
-import Language_Menu from './language_menu';
-import Settings_Menu from './settings_menu';  
+import './navbar.css'; 
 import AdviceModal from './advice_modal'; // Make sure the path is correct
+import { navigationMenuTriggerStyle,} from "@/components/ui/navigation-menu";
+import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() { 
   const openModal = () => {
@@ -21,7 +21,15 @@ function Navbar() {
         <Link className="btn btn-ghost text-xl" to='/home'>
           <FontAwesomeIcon icon={faCloud}></FontAwesomeIcon>WeatherWise
         </Link> 
-        <Navigation_Menu></Navigation_Menu>
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost m-1">Explore</div>
+          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-22">
+                <Link className={navigationMenuTriggerStyle()} to="/Forecast">Forecast</Link>
+                <Link className={navigationMenuTriggerStyle()} to="/Health">Health</Link>
+                <Link className={navigationMenuTriggerStyle()} to="/Crops">Crops</Link>
+                <Link className={navigationMenuTriggerStyle()} to="/Travel">Travel</Link>
+          </ul>
+        </div>
         {/* Button to open Advice Modal */}
         <button className="btn btn-ghost ml-2" onClick={openModal}> Daily Advice
         </button>
@@ -34,10 +42,25 @@ function Navbar() {
           <FontAwesomeIcon icon={faTriangleExclamation}></FontAwesomeIcon>
         </p>
       </div>
-      <div className="flex-none px-7 justify-center items-center">
+      <div className="flex-none px-7 justify-center items-center mr-5">
         <Clock></Clock><div className="px-2"></div>
-        <Language_Menu></Language_Menu>
-        <Settings_Menu></Settings_Menu>
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost m-1"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon></div>
+          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-22">
+            <Link className={navigationMenuTriggerStyle()} >EN</Link> 
+            <Link className={navigationMenuTriggerStyle()} >PT</Link>
+            <Link className={navigationMenuTriggerStyle()} >FR</Link>
+            <Link className={navigationMenuTriggerStyle()} >ES</Link>
+          </ul>
+        </div>
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost m-1"><FontAwesomeIcon icon={faCog}></FontAwesomeIcon></div>
+          <ul tabIndex={0} className="dropdown-content z-[1] menu shadow bg-base-100 mr-2 rounded-box w-22">
+            <Link className={navigationMenuTriggerStyle()} >Help</Link> 
+            <Link className={navigationMenuTriggerStyle()} >Contacts</Link>
+            <Link to={'/AboutUs'} className={navigationMenuTriggerStyle()} >About Us</Link>
+          </ul>
+        </div>
       </div>
       {/* Include Modal in Navbar */}
       <AdviceModal />

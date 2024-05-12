@@ -158,7 +158,7 @@ function Crops() {
       <Navbar />
       <div className="container mx-auto px-4">
         <div className="py-10">
-          <h2 className="text-4xl font-bold text-gray-800">Crops</h2>
+          <h2 className="text-4xl font-bold text-white/90">Crops</h2>
         </div>
         <div className="flex justify-between">
           {" "}

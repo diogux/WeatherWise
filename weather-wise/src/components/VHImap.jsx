@@ -17,15 +17,6 @@ const VHImap = () => {
   };
 
   const styleFunction = (feature) => {
-    if (feature.properties.Concelho === "FAFE") {
-      return {
-        fillColor: "#FFFF00",
-        weight: 1,
-        opacity: 1,
-        color: "white",
-        fillOpacity: 0.7,
-      };
-    }
     const fillColor = getConcelhoColor(feature.properties.Concelho);
     return {
       fillColor: fillColor,
@@ -47,6 +38,15 @@ const VHImap = () => {
         },
       });
     }
+  };
+
+
+  const renderTitle = () => {
+    return (
+      <div className="title">
+        <h1>VHI Map</h1>
+      </div>
+    );
   };
 
   const handleZoomToconcelho = () => {
@@ -72,6 +72,19 @@ const VHImap = () => {
           onEachFeature={onEachCity}
           style={styleFunction}
         />
+        <div
+          className="title"
+          style={{
+            position: "absolute",
+            top: "10px",
+            left: "55px",
+            backgroundColor: "white",
+            padding: "5px",
+            borderRadius: "5px",
+          }}
+        >
+          {renderTitle()}
+        </div>
       </MapContainer>
     </div>
   );

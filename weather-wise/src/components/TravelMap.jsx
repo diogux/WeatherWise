@@ -14,6 +14,24 @@ const TravelMap = () => {
     return district ? district[selectedCondition] : null;
   };
 
+  const conditionColors = {
+    humidity: {
+      'Low': '#add8f8', // < 40%
+      'Moderate': '#4596e2', // 40-80%
+      'High': '#000aaa', // > 80%
+    },
+    visibility: {
+      'Poor': '#90ee60',
+      'Moderate': '#00C000',
+      'Good': '#006A10',
+    },
+    precipitation: {
+      'Low': '#ffffe0',
+      'Moderate': '#ffd700',
+      'High': '#ff8c00',
+    }
+  };
+
   const onEachCity = (district, layer) => {
     const districtName = district.properties && district.properties.woe_name;
     if (districtName) {
@@ -28,6 +46,25 @@ const TravelMap = () => {
     }
   };
 
+  const renderLegend = () => {
+    const currentColors = conditionColors[selectedCondition];
+    return (
+      <table className="legend">
+        <caption style={{ display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
+          {selectedCondition.charAt(0).toUpperCase() + selectedCondition.slice(1)} Levels
+        </caption>
+        <tbody>
+          {Object.entries(currentColors).map(([level, color]) => (
+            <tr key={level}>
+              <td style={{ backgroundColor: color, width: "20px", height: "20px" }}></td>
+              <td style={{ paddingLeft: '5px' }}>{level}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  };
+
   const renderTitle = (conditionValue) => {
     return (
       <div className="title">
@@ -39,6 +76,7 @@ const TravelMap = () => {
       </div>
     );
   };
+
 
   const mapConditionToColor = (conditionValue) => {
     if (selectedCondition === "humidity") {
@@ -103,6 +141,19 @@ const TravelMap = () => {
           style={styleFunction}
           onEachFeature={onEachCity}
         />
+        <div
+          className="uv-scale"
+          style={{
+            position: "absolute",
+            bottom: "10px",
+            right: "10px",
+            backgroundColor: "white",
+            padding: "5px",
+            borderRadius: "5px",
+          }}
+        >
+          {renderLegend()}
+        </div>
         <div
           className="title"
           style={{

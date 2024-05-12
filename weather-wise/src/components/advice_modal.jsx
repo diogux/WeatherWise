@@ -16,7 +16,7 @@ const Modal = () => {
   return (
       <dialog id="my_modal_2" className="modal text-white">
 
-        <div className="modal-box bg-black/70">
+        <div className="modal-box bg-grey">
           <h3 className="font-bold text-lg">Daily Advice</h3>
           <p className="py-4">Expect rainy weather today <FontAwesomeIcon icon={faCloudRain}></FontAwesomeIcon></p>
           <b>It might be best to bring an umbrella!</b>

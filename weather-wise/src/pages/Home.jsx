@@ -65,11 +65,11 @@ function Home() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <Rain />
-      <div className="mx-auto flex-grow p-10 flex flex-col items-center justify-center text-center">
-        <h2 className="text-4xl font-bold text-grey">Aveiro</h2>
-        <h2 className="text-8xl font-bold mb-2 text-grey">19°</h2>
-        <h2 className="text-2xl font-bold mb-2 text-grey">Mostly Cloudy</h2>
-        <h2 className="text-1xl font-bold mb-6 text-grey">23°C | 17°C </h2>
+      <div className="mx-auto flex-grow p-5 flex flex-col items-center justify-center text-center">
+        <h2 className="text-4xl font-bold text-white/80">Aveiro</h2>
+        <h2 className="text-8xl font-bold mb-2 text-white/80">19°</h2>
+        <h2 className="text-2xl font-bold mb-2 text-white/80">Mostly Cloudy</h2>
+        <h2 className="text-1xl font-bold mb-6 text-white/80">25°C | 17°C </h2>
         <Search placeholder="Is it going to rain?" />
       </div>
       <div className="flex flex-col justify-end items-end mr-20 mb-5">

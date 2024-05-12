@@ -69,7 +69,7 @@ function Health() {
         <Navbar />
 
         <div className="mx-auto w-full flex-left px-40 mt-10 mb-10">
-          <h2 className="text-4xl font-bold text-grey">Health</h2>
+          <h2 className="text-4xl font-bold text-white/90">Health</h2>
         </div>
 
         <div className="flex justify-between px-40">
@@ -78,8 +78,13 @@ function Health() {
             {/* Left side for the table */}
             <div className="flex justify-left">
               <div className="weekly-forecast-table w-1/6 grow bg-white/70">
-                <div className="day text-grey text">
-                  Current Air Quality: GOOD
+                <div className="flex items-center justify-center">
+                <div className="day text-gray text">
+                  Current Air Quality:
+                </div>
+                <div className="day text-green-600 text">
+                &nbsp;GOOD
+                </div>
                 </div>
               </div>
             </div>

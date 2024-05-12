@@ -37,6 +37,14 @@ const ForecastMap = () => {
     }
   };
 
+  const renderTitle = () => {
+    return (
+      <div className="title">
+        <h1>Forecast Map</h1>
+      </div>
+    );
+  };
+
   useEffect(() => {
     const sunIcon = new L.Icon({
       iconUrl: "https://cdn-icons-png.flaticon.com/128/3915/3915152.png",
@@ -122,6 +130,20 @@ const ForecastMap = () => {
         {createOverlay([38.172758, -8.154616],[38.172758+x,-8.154616+y])}
         {createOverlay([37.347644, -8.616555],[37.347644+x,-8.616555+y])}
         {createOverlay([41.339056, -7.341056],[41.339056+x,-7.341056+y])}
+        
+        <div
+          className="title"
+          style={{
+            position: "absolute",
+            top: "10px",
+            left: "55px",
+            backgroundColor: "white",
+            padding: "5px",
+            borderRadius: "5px",
+          }}
+        >
+          {renderTitle()}
+        </div>
       </MapContainer>
     </div>
   );

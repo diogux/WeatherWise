@@ -6,7 +6,7 @@
   
   
   body  {
-      background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+      background-image: url('https://files.oaiusercontent.com/file-H95geVNv9yGTCW94kympbEW7?se=2024-05-11T22%3A36%3A25Z&sp=r&sv=2023-11-03&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D1bb0f2f8-82b1-463c-b3d6-b5b78b300a2f.webp&sig=WZDEnq71VuT7R1TWrhBc4FBKunyltHuIxdiBYOvqCLE%3D');
       background-repeat: no-repeat;
       background-size: cover;
           -webkit-animation: slidein 100s;
@@ -23,13 +23,13 @@
   }
   
   @-webkit-keyframes slidein {
-    from {background-position: top; background-size:200%; }
+    from {background-position: top; background-size:175%; }
     to {background-position: 0px 0px; background-size: 100%;}
   }
   
   @keyframes slidein {
-    from {background-position: top; background-size:200%; }
-    to {background-position: 0px 0px; background-size: 100%;}
+    from {background-position: top; background-size:175%; }
+    to {background-position: 0px 0px; background-size: 125%;}
   }
   
   

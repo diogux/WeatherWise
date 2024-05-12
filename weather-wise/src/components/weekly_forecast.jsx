@@ -36,16 +36,16 @@ const WeeklyWeatherForecast = ({ location }) => {
   const selectedForecastData = forecastDataByLocation[location] || forecastDataByLocation['Lisboa'];
 
   return (
-    <div className="weekly-forecast-table bg-white/70">
+    <div className="weekly-forecast-table text-grey-700 bg-white/70">
       <table>
         <tbody>
           <tr>
             {selectedForecastData.map((data, index) => (
               <td key={index}>
-                <div className="date text-grey">{data.date}</div>
-                <div className="day text-grey">{data.day}</div>
+                <div className="date text-gray-700">{data.date}</div>
+                <div className="day text-gray-700">{data.day}</div>
                 <div className="icon">{data.icon}</div>
-                <div className="temperature">{data.high}°C | {data.low}°C</div>
+                <div className="temperature ">{data.high}°C | {data.low}°C</div>
               </td>
             ))}
           </tr>
