@@ -24,11 +24,6 @@ function Home() {
         </Link>
       ),
     },
-    "Daily Advice": {
-      description: "Advice and tips for your activities",
-      imageSrc: "https://cdn-icons-png.flaticon.com/128/834/834768.png",
-      component: (props) => <Advice_Modal {...props} />,
-    },
     Health: {
       description: "Health-related information",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3004/3004458.png",

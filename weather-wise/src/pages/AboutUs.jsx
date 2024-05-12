@@ -7,12 +7,12 @@ function AboutUs() {
       <Navbar />
       <div className="container mx-auto px-4 flex justify-center">
         <div className="mt-20">
-          <h2 className="text-4xl font-bold text-gray-800 text-center">
+          <h2 className="text-4xl font-bold text-white/90 text-center">
             About Us
           </h2>
           <div className="mt-8 px-6 py-4 rounded-lg shadow-lg bg-white/60 max-w-2xl mx-auto text-center">
             <h3 className="text-lg font-semibold text-gray-900">
-              About this project
+              This project
             </h3>
             <p className="text-gray-600 mt-4">
               WeatherWise is a web application that provides users with weather
