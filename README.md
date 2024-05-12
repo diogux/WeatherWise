@@ -3,18 +3,18 @@ Weather website with personalized features for users.
 
 # To Do
 ## Website:
-- [ ] dar fix dos botões na navbar
+- [x] dar fix dos botões na navbar
 - [ ] pôr barra de pesquisa a funcionar
-- [ ] pôr legenda nos mapas do travel
+- [x] pôr legenda nos mapas do travel
 - [ ] fazer página de storms?
 - [ ] pôr edit cards a funcionar
-- [ ] dar fix da scroll bar que não devia existir
+- [x] dar fix da scroll bar que não devia existir (MENOS NA PAGINA DE TRAVEL) - ainda falta essa
 - [ ] percentage of water in the soil não tem a legenda da cor por conselho, como no vhi
-- [ ] colocar o warning no centro da navbar (a raquel n sabe centrar um div)
-- [ ] acrescentar label de setúbal no mapa
-- [ ] dar fix do fundo que desaparece ??
-- [ ] no about us, o link para o github devia estar no card e não no símbolo
-- [ ] meter título do mapa de forecast
+- [ ] colocar o warning no centro da navbar (a raquel n sabe centrar um div) - o diogo é preguiçoso
+- [x] acrescentar label de setúbal no mapa
+- [x] dar fix do fundo que desaparece ??
+- [x] no about us, o link para o github devia estar no card e não no símbolo
+- [x] meter título do mapa de forecast
 
 ## Apresentação:
 - [ ] organizar dados dos forms ? idk
