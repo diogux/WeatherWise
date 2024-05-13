@@ -82,11 +82,37 @@ function Health() {
                 <div className="day text-gray text">
                   Current Air Quality:
                 </div>
+
                 <div className="day text-green-600 text">
                 &nbsp;GOOD
                 </div>
+
                 </div>
+
+
               </div>
+
+
+            </div>
+
+
+            <div className="flex justify-left">
+              <div className="weekly-forecast-table w-1/6 grow bg-white/70">
+                <div className="flex items-center justify-center">
+                <div className="day text-gray text">
+                  UV Levels:
+                </div>
+
+                <div className="day text-orange-600 text">
+                &nbsp;MEDIUM
+                </div>
+
+                </div>
+
+
+              </div>
+
+
             </div>
             <div className="flex justify-left">
               <AirQualityCard pollutants={pollutants} />
