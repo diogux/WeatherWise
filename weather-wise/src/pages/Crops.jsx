@@ -35,9 +35,9 @@ function Crops() {
     { range: "75-89", color: "#ADFF2F" },
     { range: "60-74", color: "#FFFF00" },
     { range: "45-59", color: "#FFB000" },
-    { range: "30-44", color: "#FFA300" },
+    { range: "30-44", color: "#CB6D51" },
     { range: "15-29", color: "#A52A2A" },
-    { range: "0-14", color: "#8B0000" },
+    { range: "0-14", color: "black" },
   ];
 
   const PWSItems = [
