@@ -15,6 +15,7 @@ Weather website with personalized features for users.
 - [x] dar fix do fundo que desaparece ??
 - [x] no about us, o link para o github devia estar no card e não no símbolo
 - [x] meter título do mapa de forecast
+- [ ] no forecast, tem q dar para selecionar dias e mostrar as diferentes hourly temperatures
 
 ## Apresentação:
 - [ ] organizar dados dos forms ? idk
