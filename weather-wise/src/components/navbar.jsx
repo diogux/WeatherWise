@@ -47,7 +47,7 @@ function Navbar() {
       </div>
 
         <div className="ticker flex-1">
-        <Link className="btn btn-ghost" to='/storms'>
+        <Link className="" to='/storms'>
           <p className='ticker-text'>
             <FontAwesomeIcon icon={faTriangleExclamation}></FontAwesomeIcon>
             Warning: Severe coastal weather
