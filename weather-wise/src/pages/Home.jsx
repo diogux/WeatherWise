@@ -54,16 +54,6 @@ function Home() {
         </Link>
       ),
     },
-    Storms: {
-      description: "Current storms in Portugal",
-      imageSrc: "https://cdn-icons-png.flaticon.com/128/3915/3915152.png",
-      link: "/storms",
-      component: (props) => (
-        <Link to={props.link}>
-          <Card {...props} />
-        </Link>
-      ),
-    },
   };
 
   return (
