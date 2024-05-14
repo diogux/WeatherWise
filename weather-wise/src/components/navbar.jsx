@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil, faTriangleExclamation, faCloud, faCloudRain } from '@fortawesome/free-solid-svg-icons';
@@ -14,6 +15,15 @@ function Navbar() {
     const modal = document.getElementById('my_modal_2');
     modal.showModal();
   };
+
+
+  const [selectedLanguage, setSelectedLanguage] = useState('EN');
+
+  const handleLanguageSelect = (language) => {
+    setSelectedLanguage(language);
+  }
+
+
 
   return ( 
     <div className="navbar bg-black/30 text-white">
@@ -46,13 +56,16 @@ function Navbar() {
       <div className="flex-none px-7 justify-center items-center mr-5">
         <Clock></Clock><div className="px-2"></div>
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost m-1"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon></div>
-          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-22">
-            <Link className={navigationMenuTriggerStyle()} >EN</Link> 
-            <Link className={navigationMenuTriggerStyle()} >PT</Link>
-            <Link className={navigationMenuTriggerStyle()} >FR</Link>
-            <Link className={navigationMenuTriggerStyle()} >ES</Link>
-          </ul>
+      <div tabIndex={0} role="button" className="btn btn-ghost m-1">
+        <FontAwesomeIcon icon={faEarthAmericas} />
+        {selectedLanguage}
+      </div>
+      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-22">
+        <Link className={navigationMenuTriggerStyle()} onClick={() => handleLanguageSelect('EN')}>EN</Link>
+        <Link className={navigationMenuTriggerStyle()} onClick={() => handleLanguageSelect('PT')}>PT</Link>
+        <Link className={navigationMenuTriggerStyle()} onClick={() => handleLanguageSelect('FR')}>FR</Link>
+        <Link className={navigationMenuTriggerStyle()} onClick={() => handleLanguageSelect('ES')}>ES</Link>
+      </ul>
         </div>
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost m-1"><FontAwesomeIcon icon={faCog}></FontAwesomeIcon></div>
