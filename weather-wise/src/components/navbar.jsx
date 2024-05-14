@@ -28,6 +28,7 @@ function Navbar() {
                 <Link className={navigationMenuTriggerStyle()} to="/Health">Health</Link>
                 <Link className={navigationMenuTriggerStyle()} to="/Crops">Crops</Link>
                 <Link className={navigationMenuTriggerStyle()} to="/Travel">Travel</Link>
+                <Link className={navigationMenuTriggerStyle()} to="/Storms">Storms</Link>
           </ul>
         </div>
         {/* Button to open Advice Modal */}
