@@ -66,6 +66,7 @@ const StormsMap = () => {
                 zoomControl={false}
                 dragging={false}
                 scrollWheelZoom={false}
+                doubleClickZoom={false}
                 style={{ height: "80vh", width: "80vw" }}
             >
                 {/* Adicione a camada da imagem como um overlay */}
