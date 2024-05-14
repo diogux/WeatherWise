@@ -6,7 +6,7 @@ Weather website with personalized features for users.
 - [x] dar fix dos botões na navbar
 - [ ] pôr barra de pesquisa a funcionar
 - [x] pôr legenda nos mapas do travel
-- [ ] fazer página de storms?
+- [x] fazer página de storms?
 - [ ] pôr edit cards a funcionar
 - [x] dar fix da scroll bar que não devia existir (MENOS NA PAGINA DE TRAVEL) - ainda falta essa
 - [ ] percentage of water in the soil não tem a legenda da cor por conselho, como no vhi
@@ -18,6 +18,6 @@ Weather website with personalized features for users.
 - [ ] no forecast, tem q dar para selecionar dias e mostrar as diferentes hourly temperatures
 
 ## Apresentação:
-- [ ] organizar dados dos forms ? idk
-- [ ] apresentar métodos usados (avaliação da usabilidade)
-- [ ] não sei se é só preciso apresentar o site ou mais alguma coisa
+- [x] organizar dados dos forms ? idk
+- [x] apresentar métodos usados (avaliação da usabilidade)
+- [x] não sei se é só preciso apresentar o site ou mais alguma coisa
