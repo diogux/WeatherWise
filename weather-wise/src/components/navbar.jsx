@@ -45,14 +45,16 @@ function Navbar() {
         <button className="btn btn-ghost ml-2" onClick={openModal}> Daily Advice
         </button>
       </div>
-  
-      <div className="ticker flex-1">
-        <p className='ticker-text'>
-          <FontAwesomeIcon icon={faTriangleExclamation}></FontAwesomeIcon>
-          Warning: Severe coastal weather
-          <FontAwesomeIcon icon={faTriangleExclamation}></FontAwesomeIcon>
-        </p>
-      </div>
+
+        <div className="ticker flex-1">
+        <Link className="btn btn-ghost" to='/storms'>
+          <p className='ticker-text'>
+            <FontAwesomeIcon icon={faTriangleExclamation}></FontAwesomeIcon>
+            Warning: Severe coastal weather
+            <FontAwesomeIcon icon={faTriangleExclamation}></FontAwesomeIcon>
+          </p>
+          </Link>
+        </div>
       <div className="flex-none px-7 justify-center items-center mr-5">
         <Clock></Clock><div className="px-2"></div>
         <div className="dropdown">
