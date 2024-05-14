@@ -15,6 +15,7 @@ function Crops() {
     { label: "Percentage of water in the soil", value: "PWS" },
     // Add more options as needed
   ];
+  
 
   const [selectedLocation, setSelectedLocation] = useState("Aveiro");
   const [VHI, setVHI] = useState(""); // Initialize VHI state

@@ -34,7 +34,7 @@ function Forecast() {
       <div className="background-container flex-col min-h-screen">
         <Navbar />
         <div className="mx-auto w-full flex-left px-40 mt-10 mb-10">
-          <h2 className="text-4xl font-bold text-white/90">Forecast</h2>
+          <h2 className="text-4xl font-bold text-white/90">Forecast - ({selectedLocation})</h2>
         </div>
         <div className="flex justify-between px-40">
           <div className="w-1/2 pr-4">

@@ -1,6 +1,16 @@
 import { text } from "@fortawesome/fontawesome-svg-core";
 import "./dailyWeatherDetails.css";
 
+const VHIItems = [
+  { range: "90-100", color: "#008000" },
+  { range: "75-89", color: "#ADFF2F" },
+  { range: "60-74", color: "#FFFF00" },
+  { range: "45-59", color: "#FFB000" },
+  { range: "30-44", color: "#CB6D51" },
+  { range: "15-29", color: "#A52A2A" },
+  { range: "0-14", color: "black" },
+];
+
 const CropsVHI = ({ location, VHI }) => {
   const tableStyle = {
     width: "100%",
@@ -34,6 +44,16 @@ const CropsVHI = ({ location, VHI }) => {
   if (vhi === "") {
     vhi = "#008000";
   }
+  const findVHIForColor = (color) => {
+    const item = VHIItems.find((item) => item.color === color);
+    if (!item) {
+      return "90-100";
+    }
+    return item ? item.range : "";
+  };
+
+  const vhiRange = findVHIForColor(VHI);
+
   return (
     <div className="bg-white/70 text-grey" style={divStyle}>
       <table style={tableStyle}>
@@ -46,7 +66,7 @@ const CropsVHI = ({ location, VHI }) => {
           </tr>
           <tr>
             <td style={tdStyle}>
-              <strong style={strongStyle}>VHI:</strong>
+              <strong style={strongStyle}>VHI: &nbsp;&nbsp; [{vhiRange}]</strong>
             </td>
             <td style={tdStyle2}>
               {/* {VHI} */}
