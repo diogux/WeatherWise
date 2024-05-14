@@ -25,13 +25,17 @@ const CropsVHI = ({ location, VHI }) => {
   const tdStyle = {
     padding: "10px",
     textAlign: "left", // Ensure text is always left-aligned
-    width: "30%", // Set a fixed width for the left td
+    width: "40%", // Set a fixed width for the left td
+    fontSize: "20px",
   };
 
   const tdStyle2 = {
     padding: "10px",
+
+    fontWeight: "450",
+    fontSize: "20px",
     textAlign: "left", // Ensure text is always left-aligned
-    width: "70%", // Set a fixed width for the right td
+    width: "60%", // Set a fixed width for the right td
   };
 
   const strongStyle = {
