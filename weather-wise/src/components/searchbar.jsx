@@ -1,15 +1,25 @@
+// SearchBar.js
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-export default function SearchBar({ placeholder }) {
+export default function SearchBar({ placeholder, onSearch }) {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = () => {
+    onSearch(searchQuery);  // Trigger the onSearch function with the current query
+  };
+
   return (
     <div className="flex items-center space-x-2">
       <Input
         type="text"
         className="px-3 py-2 w-80 border-indigo-600"
-        placeholder={placeholder} // Use the placeholder prop here
+        placeholder={placeholder}
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <Button className="px-3 py-2">
+      <Button className="px-3 py-2" onClick={handleSearch}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
