@@ -7,7 +7,7 @@ Weather website with personalized features for users.
 - [x] pôr barra de pesquisa a funcionar
 - [x] pôr legenda nos mapas do travel
 - [x] fazer página de storms?
-- [ ] pôr edit cards a funcionar
+- [x] pôr edit cards a funcionar
 - [x] dar fix da scroll bar que não devia existir (MENOS NA PAGINA DE TRAVEL) -
 - [kek] percentage of water in the soil não tem a legenda da cor por conselho, como no vhi - lol
 - [x] colocar o warning no centro da navbar (a raquel n sabe centrar um div) - o diogo é preguiçoso -  está mais gostosa
