@@ -10,7 +10,21 @@ const DailyWeatherDetails = ({ location, wind, humidity }) => {
   };
 
   return (
-    <div className="daily-weather-details bg-white/70 text-gray-700">
+    <div className="daily-weather-details bg-white/70 text-gray-700 fixed-size">
+      <style>
+        {`
+        .daily-weather-details {
+          border-radius: 0.5rem;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+        
+        .fixed-size {
+          width: 300px; /* Adjust width as needed */
+          height: 330px; /* Adjust height as needed */
+          white-space: nowrap; /* Ensure text does not wrap */
+        }
+      `}        
+      </style>
       <table>
         <tbody>
           <tr>

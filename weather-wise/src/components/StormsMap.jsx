@@ -90,7 +90,7 @@ const StormsMap = () => {
                 ]}
                 style={{ height: "80vh", width: "70vw" }}
             >
-                {/* Adicione a camada da imagem como um overlay */}
+                {/* Adiciona a camada da imagem como um overlay */}
                 <SVGOverlay bounds={imageBounds}>
                     <image href="https://maps.weatherforyou.com/0KT4zzIuojnRWn4BTWTCX_OLEgTCckfgPaBRSRZhx3Kx3dO87LLBvuLfWPsW6a/radar-2m/750x562/39.06,-77.4,7/current.png" x={0} y={0} width="100%" height="100%" style={{opacity :0.7}} />
                 </SVGOverlay>

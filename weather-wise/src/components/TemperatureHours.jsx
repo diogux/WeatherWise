@@ -36,7 +36,7 @@ const TemperatureHours = ({ location }) => {
   const selectedHourlyData = hourlyDataByLocation[location] || hourlyDataByLocation['Lisboa'];
 
   return (
-    <div className="mt-3 ml-8 hourly-temperature-table bg-white/70 text-gray">
+    <div className="mt-3 ml-10 hourly-temperature-table bg-white/70 text-gray">
       <table className="table-fixed w-full">
         <tbody>
           {selectedHourlyData.map((data, index) => (

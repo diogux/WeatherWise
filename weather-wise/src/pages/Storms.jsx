@@ -1,7 +1,8 @@
 import "../App.css";
-import { FaInfoCircle } from 'react-icons/fa';
+import { FaInfoCircle } from "react-icons/fa";
 import Navbar from "../components/navbar";
 import StormsMap from "../components/StormsMap";
+import StormInfoCard from "../components/stormInfoCard"; // Import the new component
 
 function Storms() {
   const InfoCard = () => (
@@ -44,19 +45,28 @@ function Storms() {
       </table>
     </div>
   );
-  
-  
+
+  const stormData = {
+    stormName: "Warning: Hurricane Sandy",
+    stormInfo: "Category 4 hurricane with winds up to 150 mph."
+  };
 
   return (
     <>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <div className="mx-auto w-full flex-grow pt-10 pl-10 relative">
-          <h2 className="text-4xl font-bold text-white mb-6">Storms and Hurricanes</h2>
+        <div className="mx-auto w-full flex-grow pt-10 pl-20 relative">
+          <h2 className="text-4xl font-bold text-white mb-3 ml-3">Storms and Hurricanes</h2>
           <div className="flex w-full mx-auto relative">
-            <div className="w-full md:w-1/4 mb-4 md:mb-0 pr-10">
-              <div className="mb-4">
-                <CriticalRegionsCard />
+            <div className="w-full md:w-1/4 mb-4 md:mb-0 pr-8 mt-20">
+              <div className="mb-10">
+                <StormInfoCard
+                  stormName={stormData.stormName}
+                  stormInfo={stormData.stormInfo}
+                />
+              </div>
+              <div className="mb-10">
+              <CriticalRegionsCard />
               </div>
               <div className="mb-4">
                 <InfoCard />

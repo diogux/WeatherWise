@@ -4,8 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import distritos from '../data/Portugal.json';
 
-const ForecastMap = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const ForecastMap = ({ onLocationSelect }) => {
   const [map, setMap] = useState(null);
 
   const mapVHIToColor = (vhi) => {
@@ -32,6 +31,12 @@ const ForecastMap = () => {
         },
         mouseout: (e) => {
           layer.closeTooltip();
+        },
+        click: () => {
+          console.log(`Clicked on: ${districtName}`);
+          if (onLocationSelect) {
+            onLocationSelect(districtName); // Trigger the location select handler
+          }
         }
       });
     }

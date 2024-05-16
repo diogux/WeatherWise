@@ -14,6 +14,7 @@ function Forecast() {
   const [humidity, setHumidity] = useState("35"); // Initialize humidity state
 
   const handleLocationChange = (location) => {
+    console.log(`Location changed to: ${location}`);
     setSelectedLocation(location);
 
     // Update wind and humidity values
@@ -26,6 +27,15 @@ function Forecast() {
     } else if (location === "Porto") {
       setWind("12");
       setHumidity("30");
+    } else if (location === "Faro") {
+      setWind("20");
+      setHumidity("45");
+    } else if (location === "Coimbra") {
+      setWind("8");
+      setHumidity("25");
+    } else if (location === "Braga") {
+      setWind("11");
+      setHumidity("32");
     }
   };
 
@@ -34,31 +44,35 @@ function Forecast() {
       <div className="background-container flex-col min-h-screen">
         <Navbar />
         <div className="mx-auto w-full flex-left px-40 mt-10 mb-10">
-          <h2 className="text-4xl font-bold text-white/90">Forecast - ({selectedLocation})</h2>
+          <h2 className="text-4xl font-bold text-white/90">Forecast - {selectedLocation}</h2>
         </div>
         <div className="flex justify-between px-40">
           <div className="w-1/2 pr-4">
             {" "}
             {/* Left side for the table */}
             <p className="text-2xl font-bold text-white/80">Week</p>
-            <div className="flex justify-left">
+            <div className="flex justify-left ml mt-2">
               <WeeklyWeatherForecast location={selectedLocation} />
             </div>
             <div className="flex justify-left">
-              <p className="text-2xl font-bold text-white/80 mt-10 mr-20">
+              <p className="text-2xl font-bold text-white/80 mt-10 mr-60">
                 Today
               </p>
-              <p className="text-2xl font-bold text-white/80 mt-10 ml-20">
+              <p className="text-2xl font-bold text-white/80 mt-10 ml-10">
                 Hourly Temperature
               </p>
             </div>
             <div className="flex justify-left">
+              <div>
               <DailyWeatherDetails
                 location={selectedLocation}
                 wind={wind}
                 humidity={humidity}
               />
-              <TemperatureHours location={selectedLocation} />
+              </div>
+              <div>
+                <TemperatureHours location={selectedLocation} />
+                </div>
             </div>
           </div>
           <div className="w-1/2 pl-4">
@@ -72,7 +86,7 @@ function Forecast() {
                 onLocationChange={handleLocationChange}
               />
             </div>
-            <ForecastMap />
+            <ForecastMap onLocationSelect={handleLocationChange} />
           </div>
         </div>
       </div>

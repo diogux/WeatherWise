@@ -1,3 +1,4 @@
+// components/sheet_content.js
 import React from 'react';
 import { useDrag, useDrop, DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
@@ -30,13 +31,13 @@ const DraggableCard = ({ name, index, moveCard }) => {
 };
 
 const SheetContentDemo = () => {
-  const { cardOrder, setCardOrder } = useCardOrder();
+  const { cardOrder, setOrderAndVisibility } = useCardOrder();
 
   const moveCard = (from, to) => {
     const updatedCards = [...cardOrder];
     const [removed] = updatedCards.splice(from, 1);
     updatedCards.splice(to, 0, removed);
-    setCardOrder(updatedCards);
+    setOrderAndVisibility(updatedCards);
   };
 
   return (

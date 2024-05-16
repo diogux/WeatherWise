@@ -5,8 +5,7 @@ import "./Map.css";
 import concelhos from "../data/Concelhos.json";
 import concelhoColors from "../data/ConcelhoColors.json";
 
-const VHImap = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+const VHImap = ({ onCityClick }) => {
   const [map, setMap] = useState(null);
 
   const getConcelhoColor = (concelhoName) => {
@@ -36,10 +35,12 @@ const VHImap = () => {
         mouseout: (e) => {
           layer.closeTooltip();
         },
+        click: (e) => {
+          onCityClick(district.properties.Concelho);
+        },
       });
     }
   };
-
 
   const renderTitle = () => {
     return (
@@ -49,21 +50,12 @@ const VHImap = () => {
     );
   };
 
-  const handleZoomToconcelho = () => {
-    const layer = concelhos.features.find(
-      (feature) => feature.properties.Concelho === searchTerm
-    );
-    if (layer) {
-      map.fitBounds(layer.geometry.coordinates[0]);
-    }
-  };
-
   return (
     <div>
       <MapContainer
         center={[39.3999, -8.2245]}
         zoom={6.5}
-        style={{ height: "70vh" , position: 'relative'}}
+        style={{ height: "70vh", position: 'relative' }}
         dragging={true}
         whenCreated={setMap}
       >

@@ -50,9 +50,11 @@ function Navbar() {
         <Link className="" to='/storms'>
           <p className='ticker-text'>
             <FontAwesomeIcon icon={faTriangleExclamation}></FontAwesomeIcon>
-            Warning: Severe coastal weather
-            <FontAwesomeIcon icon={faTriangleExclamation}></FontAwesomeIcon>
+            &nbsp; Warning: Severe coastal weather |
+             Click for more info&nbsp; 
+             <FontAwesomeIcon icon={faTriangleExclamation}></FontAwesomeIcon>
           </p>
+          
           </Link>
         </div>
       <div className="flex-none px-7 justify-center items-center mr-5">

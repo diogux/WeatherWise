@@ -1,48 +1,52 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import Navbar from "../components/navbar";
 import Search from "../components/searchbar";
 import Card from "../components/card";
 import Rain from "../components/rain";
-import Card_Modal from "../components/card_modal";
-import Advice_Modal from "../components/advice_modal";
 import { useCardOrder } from "../components/CardOrderContext";
 import SheetDemo from "../components/sheet";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
 
 function Home() {
   const { cardOrder } = useCardOrder();
   const [showSearchResult, setShowSearchResult] = useState(false);
   const [searchResult, setSearchResult] = useState("");
-  const resultCardRef = useRef(null);  // Ref for the card
+  const resultCardRef = useRef(null);
+  const [isExiting, setIsExiting] = useState(false);
 
   const handleSearch = () => {
     setSearchResult(
       <>
-        <span style={{ fontSize: '15px' }}>The air quality is good for a walk outside, however, it is going to rain today. Consider indoor activities. </span>
-        <Link to="/forecast" style={{ color: '#1565C0', fontSize: '15px', fontWeight:'bold' }}>Check the forecast</Link>
+        <span style={{ fontSize: '16px' }}>The air quality is good for a walk outside, however, it is going to rain today. Consider indoor activities. </span>
+        <Link to="/forecast" style={{ color: '#1565C0', fontSize: '15px', fontWeight: 'bold' }}>Check the forecast</Link>
       </>
     );
+    setIsExiting(false);  // Reset exit state
     setShowSearchResult(true);
-};
-   // Attach listener on component mount and detach on unmount
-   useEffect(() => {
+  };
+
+  useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
-  // Handler to hide card
+  useEffect(() => {
+    if (isExiting) {
+      const timer = setTimeout(() => {
+        setShowSearchResult(false);
+      }, 500);  // Duration of the exit animation
+      return () => clearTimeout(timer);
+    }
+  }, [isExiting]);
+
   const handleClickOutside = (event) => {
     if (resultCardRef.current && !resultCardRef.current.contains(event.target)) {
-      setShowSearchResult(false);
+      setIsExiting(true);  // Trigger exit animation
     }
   };
-
 
   const cardConfig = {
     Forecast: {
@@ -56,7 +60,7 @@ function Home() {
       ),
     },
     Health: {
-      description: "Health-related information",
+      description: "Pollutants, UV levels and more",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3004/3004458.png",
       link: "/health",
       component: (props) => (
@@ -66,7 +70,7 @@ function Home() {
       ),
     },
     Crops: {
-      description: "Recommendations for your garden",
+      description: "Vegetation and soil information",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3658/3658881.png",
       link: "/crops",
       component: (props) => (
@@ -85,10 +89,53 @@ function Home() {
         </Link>
       ),
     },
+    Storms: {
+      description: "Extreme weather information",
+      imageSrc: "https://cdn-icons-png.flaticon.com/128/1146/1146860.png",
+      link: "/storms",
+      component: (props) => (
+        <Link to={props.link}>
+          <Card {...props} />
+        </Link>
+      ),
+    },
   };
 
   return (
     <div className="flex flex-col min-h-screen relative">
+      <style>
+        {`
+          @keyframes slideIn {
+            from {
+              opacity: 0;
+              transform: translateY(-15px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes slideOut {
+            from {
+              opacity: 1;
+              transform: translateY(0);
+            }
+            to {
+              opacity: 0;
+              transform: translateY(-15px);
+            }
+          }
+
+          .slide-in {
+            animation: slideIn 0.5s ease-out forwards;
+          }
+
+          .slide-out {
+            animation: slideOut 0.5s ease-out forwards;
+          }
+        `}
+      </style>
       <Navbar />
       <Rain />
       <div className="mx-auto flex-grow p-5 flex flex-col items-center justify-center text-center">
@@ -99,24 +146,23 @@ function Home() {
         <Search placeholder="Should I take a walk?" onSearch={handleSearch} />
         <div className="w-full flex justify-center mt-3">
           {showSearchResult && (
-            <div ref={resultCardRef} className="absolute top-70 w-full max-w-4xl p-3 bg-white/50 rounded-xl shadow-lg">
+            <div ref={resultCardRef} className={`absolute top-70 w-full max-w-4xl p-3 bg-white/60 rounded-xl shadow-lg ${isExiting ? 'slide-out' : 'slide-in'}`}>
               <h3 className="text-lg">{searchResult}</h3>
             </div>
           )}
         </div>
       </div>
       <div className="flex flex-col justify-end items-end mr-20 mb-5">
-        <SheetDemo></SheetDemo>
+        <SheetDemo />
       </div>
       <div className="flex justify-around mb-40 card-container">
-        {cardOrder.map((cardName) => {
+        {cardOrder.slice(0, 4).map((cardName) => {
           const config = cardConfig[cardName];
           if (!config) {
             console.error(`Configuration not found for card: ${cardName}`);
             return null; // Skip rendering this card
           }
 
-          // Render the appropriate component based on the configuration
           return config.component({
             key: cardName,
             name: cardName,

@@ -9,13 +9,10 @@ import ConcelhoColors from "../data/ConcelhoColors.json";
 import { FaInfoCircle } from "react-icons/fa";
 
 function Crops() {
-  // Step 1: Define filter options
   const filterOptions = [
     { label: "Vegetation Health Index", value: "VHI" },
     { label: "Percentage of water in the soil", value: "PWS" },
-    // Add more options as needed
   ];
-  
 
   const [selectedLocation, setSelectedLocation] = useState("Aveiro");
   const [VHI, setVHI] = useState(""); // Initialize VHI state
@@ -24,11 +21,13 @@ function Crops() {
     setSelectedLocation(location);
     for (const concelho of ConcelhoColors.concelhos) {
       if (concelho.name === location.toUpperCase()) {
-        // setVHI(concelho.color);
         setVHI(concelho.color);
       }
     }
-    // Update wind and humidity values
+  };
+
+  const handleCityClick = (cityName) => {
+    handleLocationChange(cityName);
   };
 
   const VHIItems = [
@@ -51,16 +50,12 @@ function Crops() {
     { color: "#FF0000", range: "PEP(>1)" },
   ];
 
-  // Step 2: Set up state to track selected filter
   const [selectedFilter, setSelectedFilter] = useState("VHI"); // Set default to 'VHI'
 
-  // Step 3: Function to handle filter selection
   const handleFilterChange = (e) => {
     setSelectedFilter(e.target.value);
-    // You can add logic here to update the map and legend based on the selected filter
   };
 
-  // Step 4: Define legend content based on selected filter
   const VHIfilter = (
     <div className="border border-gray-300 rounded-md overflow-hidden">
       <table style={{ width: "100%" }}>
@@ -76,7 +71,6 @@ function Crops() {
                 style={{
                   width: "50%",
                   textAlign: "center",
-                  // backgroundColor: "#FFFFFF",
                 }}
               >
                 {item.range}
@@ -115,15 +109,10 @@ function Crops() {
     return (
       <div className="info-card bg-white/70 p-4 rounded-lg">
         <div className="flex flex-col items-center">
-          {" "}
-          {/* Flex column layout */}
           <div className="mb-4">
-            {" "}
-            {/* Add margin-bottom */}
-            <FaInfoCircle size={24} color="#black" /> {/* Information icon */}
+            <FaInfoCircle size={24} color="#black" />
           </div>
           <p className="text-gray-600 text-center">
-            {/* Information paragraph */}
             The VHI, a product of NOAA/NESDIS, amalgamates multiple
             vegetation-related sub-indices derived from satellite observations.
             It offers timely and spatially consistent data, vital for detecting
@@ -138,16 +127,17 @@ function Crops() {
     return (
       <div className="info-card bg-white/70 p-4 rounded-lg">
         <div className="flex flex-col items-center">
-          {" "}
-          {/* Flex column layout */}
           <div className="mb-4">
-            {" "}
-            {/* Add margin-bottom */}
-            <FaInfoCircle size={24} color="#black" /> {/* Information icon */}
+            <FaInfoCircle size={24} color="#black" />
           </div>
           <p className="text-gray-900 text-center">
-            {/* Information paragraph */}
-              The Soil Moisture Index (SMI) from ECMWF is an indicator of the soil moisture available for plants, with a resolution of 16 km. It varies between the permanent wilting point (PWP) and field capacity (FC), with increasing evaporation efficiency. The index is represented in dark orange tones when below the PWP, between orange and blue for intermediate values, and dark blue when above the FC. The map uses the boundaries of the DRAPs.
+            The Soil Moisture Index (SMI) from ECMWF is an indicator of the soil
+            moisture available for plants, with a resolution of 16 km. It varies
+            between the permanent wilting point (PWP) and field capacity (FC),
+            with increasing evaporation efficiency. The index is represented in
+            dark orange tones when below the PWP, between orange and blue for
+            intermediate values, and dark blue when above the FC. The map uses
+            the boundaries of the DRAPs.
           </p>
         </div>
       </div>
@@ -162,16 +152,19 @@ function Crops() {
           <h2 className="text-4xl font-bold text-white/90">Crops</h2>
         </div>
         <div className="flex justify-between">
-          {" "}
-          {/* Aligns legend and map */}
           <div className="w-1/3" style={{ paddingRight: "0px" }}>
-            {/* Step 4: Add filter menu */}
             <div>
               <select
                 value={selectedFilter}
                 onChange={handleFilterChange}
                 className="border border-gray-300 rounded-md py-2 px-3 mb-2 block w-full appearance-none bg-white/50"
-                style={{ backgroundImage: 'url("data:image/svg+xml,%3csvg fill=\'%239DA5AB\' xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath d=\'M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z\'/%3e%3c/svg%3e"), linear-gradient(transparent, transparent), linear-gradient(transparent, transparent)', backgroundPosition: 'right 0.7em top 50%, 0 0', backgroundRepeat: 'no-repeat', backgroundSize: '1.2em auto, 100%' }}
+                style={{
+                  backgroundImage:
+                    'url("data:image/svg+xml,%3csvg fill=\'%239DA5AB\' xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3e%3cpath d=\'M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z\'/%3e%3c/svg%3e"), linear-gradient(transparent, transparent), linear-gradient(transparent, transparent)',
+                  backgroundPosition: 'right 0.7em top 50%, 0 0',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: '1.2em auto, 100%',
+                }}
               >
                 {filterOptions.map((option) => (
                   <option key={option.value} value={option.value}>
@@ -180,35 +173,25 @@ function Crops() {
                 ))}
               </select>
             </div>
-            {/* Step 5: Conditional rendering based on selected filter */}
             {selectedFilter === "VHI" && VHIfilter}
             {selectedFilter === "PWS" && PWSfilter}
             {selectedFilter === "VHI" && (
               <CropsVHI location={selectedLocation} VHI={VHI} />
-            )}{" "}
+            )}
             <div className="flex justify-left pt-10">
-              {/* Render CropsVHI component only when VHI filter is selected */}
-              {selectedFilter === "VHI" && <InfoCardVHI />}{" "}
-              {/* Render VHI InfoCard only when VHI filter is selected */}
-              {selectedFilter === "PWS" && <InfoCardPWS />}{" "}
-              {/* Render PWS InfoCard only when PWS filter is selected */}
+              {selectedFilter === "VHI" && <InfoCardVHI />}
+              {selectedFilter === "PWS" && <InfoCardPWS />}
             </div>
           </div>
           <div className="w-1/2 pl-20">
-            {" "}
-            {/* Right side for the map */}
             <div className="mb-2">
-              {" "}
-              {/* Add margin-bottom to the search */}
               <SearchMap
                 placeholder="Search for a location"
                 onLocationChange={handleLocationChange}
               />
             </div>
-            {/* Step 5: Conditional rendering based on selected filter */}
-            {selectedFilter === "VHI" && <VHImap />}
+            {selectedFilter === "VHI" && <VHImap onCityClick={handleCityClick} />}
             {selectedFilter === "PWS" && <PWSmap />}
-            {selectedFilter === "NCH" && <NCHmap />}
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import "../App.css";
 import Navbar from "../components/navbar";
 import HealthMap from "../components/HealthMap";
@@ -16,15 +17,10 @@ function Health() {
     return (
       <div className="info-card bg-white/70 p-4 rounded-lg">
         <div className="flex flex-col items-center">
-          {" "}
-          {/* Flex column layout */}
           <div className="mb-4">
-            {" "}
-            {/* Add margin-bottom */}
-            <FaInfoCircle size={24} color="#black" /> {/* Information icon */}
+            <FaInfoCircle size={24} color="#black" />
           </div>
           <p className="text-gray-900 text-left">
-            {/* Information paragraph */}
             <b>PMS (Particulate Matter):</b> PMS refers to solid or liquid
             particles suspended in the air, originating from various sources
             such as vehicle emissions and wildfires. These particles can cause
@@ -47,87 +43,34 @@ function Health() {
 
   return (
     <>
-      {/* <div className="flex flex-col min-h-screen">
-      <Navbar></Navbar>
-            <div className="mx-auto w-full flex-grow p-10 ">
-            <h2 className="text-4xl font-bold text-grey">Health</h2>
-            <div className="rating gap-1 bg-white/30 mt-10">
-              <input type="radio" name="rating-3" className="mask mask-heart bg-red-400" />
-              <input type="radio" name="rating-3" className="mask mask-heart bg-orange-400" checked />
-              <input type="radio" name="rating-3" className="mask mask-heart bg-yellow-400" />
-              <input type="radio" name="rating-3" className="mask mask-heart bg-lime-400" />
-              <input type="radio" name="rating-3" className="mask mask-heart bg-green-400"  />
-              dá para clicar nos corações
-            </div>
-    <div className="weekly-forecast-table w-1/6 grow bg-white/50">
-                <div className="day text-grey text">Current Air Quality: GOOD</div>
-    </div>
-            </div>
-        </div> */}
-
       <div className="background-container flex-col min-h-screen">
         <Navbar />
-
-        <div className="mx-auto w-full flex-left px-40 mt-10 mb-10">
+        <div className="mx-auto w-full flex-left px-40 mt-10 mb-3">
           <h2 className="text-4xl font-bold text-white/90">Health</h2>
         </div>
-
         <div className="flex justify-between px-40">
           <div className="w-1/2 pr-4">
-            {" "}
-            {/* Left side for the table */}
             <div className="flex justify-left">
-              <div className="weekly-forecast-table w-1/6 grow bg-white/70">
-                <div className="flex items-center justify-center">
-                <div className="day text-gray text">
-                  Current Air Quality:
+              <div className="weekly-forecast-table w-full grow bg-white/70 p-4 rounded-lg flex justify-between items-center mt-12">
+                <div className="flex items-center">
+                  <div className="day text-gray text mr-2 ml-40">Current Air Quality:</div>
+                  <div className="day text-green-600 text">GOOD</div>
                 </div>
-
-                <div className="day text-green-600 text">
-                &nbsp;GOOD
+                <div className="flex items-center">
+                  <div className="day text-gray text mr-2">UV Levels:</div>
+                  <div className="day text-orange-600 text mr-40">MEDIUM</div>
                 </div>
-
-                </div>
-
-
               </div>
-
-
             </div>
-
-
-            <div className="flex justify-left">
-              <div className="weekly-forecast-table w-1/6 grow bg-white/70">
-                <div className="flex items-center justify-center">
-                <div className="day text-gray text">
-                  UV Levels:
-                </div>
-
-                <div className="day text-orange-600 text">
-                &nbsp;MEDIUM
-                </div>
-
-                </div>
-
-
-              </div>
-
-
-            </div>
-            <div className="flex justify-left">
+            <div className="flex justify-left mt-2">
               <AirQualityCard pollutants={pollutants} />
             </div>
-            <div className="flex justify-left pt-10">
+            <div className="flex justify-left mt-5">
               <InfoCard />
             </div>
           </div>
-
           <div className="w-1/2 pl-4">
-            {" "}
-            {/* Right side for the map */}
             <div className="mb-2">
-              {" "}
-              {/* Add margin-bottom to the search */}
               <SearchMap placeholder="Search for a location" />
             </div>
             <HealthMap />

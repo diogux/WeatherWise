@@ -2,41 +2,67 @@ import React from "react";
 import weatherData from "../data/weatherConditions.json";
 
 const WeatherImpactedTravelTable = ({ weather }) => {
-  // For demo, assuming you want to always display the first district's weather
   const { humidity, visibility, precipitation, wind } = weather;
 
-  const width50 = {
-    width: "50%",
-  };
-
   return (
-    <table className="table rounded-lg bg-white/70 mt-4">
-      <thead>
-        <tr className="bg-black/80">
-          <th>Parameter</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style={width50}>Wind</td>
-          <td style={width50}>{wind} km</td>{" "}
-          {/* Wind data might not be in the JSON, show a placeholder */}
-        </tr>
-        <tr>
-          <td style={width50}>Humidity</td>
-          <td style={width50}>{humidity}%</td>
-        </tr>
-        <tr>
-          <td style={width50}>Visibility</td>
-          <td style={width50}>{visibility}</td>
-        </tr>
-        <tr>
-          <td style={width50}>Precipitation</td>
-          <td style={width50}>{precipitation}</td>
-        </tr>
-      </tbody>
-    </table>
+    <>
+      <style>
+        {`
+          .weather-table {
+            width: 100%;
+            margin-top: 1rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+
+          .weather-table thead {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+          }
+
+          .weather-table th, .weather-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+          }
+
+          .weather-table tbody tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+
+          .weather-table tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+        `}
+      </style>
+      <table className="weather-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wind</td>
+            <td>{wind || 'N/A'} km</td> {/* Placeholder if wind data is not available */}
+          </tr>
+          <tr>
+            <td>Humidity</td>
+            <td>{humidity}%</td>
+          </tr>
+          <tr>
+            <td>Visibility</td>
+            <td>{visibility}</td>
+          </tr>
+          <tr>
+            <td>Precipitation</td>
+            <td>{precipitation}</td>
+          </tr>
+        </tbody>
+      </table>
+    </>
   );
 };
 
