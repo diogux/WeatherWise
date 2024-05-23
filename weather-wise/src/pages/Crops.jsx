@@ -7,6 +7,7 @@ import PWSmap from "@/components/PWSmap";
 import CropsVHI from "@/components/crops_vhi";
 import ConcelhoColors from "../data/ConcelhoColors.json";
 import { FaInfoCircle } from "react-icons/fa";
+import concelhos from "../data/Concelhos.json";
 
 function Crops() {
   const filterOptions = [
@@ -16,15 +17,40 @@ function Crops() {
 
   const [selectedLocation, setSelectedLocation] = useState("Aveiro");
   const [VHI, setVHI] = useState(""); // Initialize VHI state
+  const [mapCenter, setMapCenter] = useState([39.3999, -8.2245]); 
+  const [zoomLevel, setZoomLevel] = useState(6.5);
 
   const handleLocationChange = (location) => {
     setSelectedLocation(location);
+  
     for (const concelho of ConcelhoColors.concelhos) {
       if (concelho.name === location.toUpperCase()) {
         setVHI(concelho.color);
       }
     }
+    console.log("Selected location:", location);
+  
+    const feature = concelhos.features.find((feature) =>
+      feature.properties.Concelho.toUpperCase() === location.toUpperCase()
+    );
+  
+    if (feature) {
+      const coordinates = feature.geometry.coordinates[0]; // Coordenadas do primeiro polígono
+  
+      // Calcular a média das coordenadas x e y
+      const centerX = coordinates.reduce((sum, coord) => sum + coord[0], 0) / coordinates.length;
+      const centerY = coordinates.reduce((sum, coord) => sum + coord[1], 0) / coordinates.length;
+  
+      // Definir as coordenadas da média como o centro do mapa
+      setMapCenter([centerY, centerX]); // Inverter a ordem para [latitude, longitude]
+      setZoomLevel(8);
+      console.log("Map center:", mapCenter);
+      console.log("Zoom level:", zoomLevel);
+    } else {
+      console.log("Localização não encontrada no GeoJSON");
+    }
   };
+  
 
   const handleCityClick = (cityName) => {
     handleLocationChange(cityName);
@@ -189,8 +215,8 @@ function Crops() {
                 placeholder="Search for a location"
                 onLocationChange={handleLocationChange}
               />
-            </div>
-            {selectedFilter === "VHI" && <VHImap onCityClick={handleCityClick} />}
+            </div>  
+            {selectedFilter === "VHI" && <VHImap onCityClick={handleCityClick} center={mapCenter} zoom={zoomLevel} />}
             {selectedFilter === "PWS" && <PWSmap />}
           </div>
         </div>

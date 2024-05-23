@@ -1,18 +1,28 @@
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MapContainer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./Map.css";
 import concelhos from "../data/Concelhos.json";
 import concelhoColors from "../data/ConcelhoColors.json";
 
-const VHImap = ({ onCityClick }) => {
+const VHImap = ({ onCityClick, center, zoom }) => {
   const [map, setMap] = useState(null);
+  const mapRef = useRef(null);
+
+  useEffect(() => {
+    if (map) {
+      // Atualiza o centro e o zoom do mapa
+      map.setView(center, zoom);
+      // Força a atualização do tamanho do mapa
+      map.invalidateSize();
+    }
+  }, [map, center, zoom]);
 
   const getConcelhoColor = (concelhoName) => {
     const concelho = concelhoColors.concelhos.find(
       (concelho) => concelho.name === concelhoName
     );
-    return concelho ? concelho.color : "#CCCCCC"; // Default color if not found
+    return concelho ? concelho.color : "#CCCCCC"; // Cor padrão se não for encontrada
   };
 
   const styleFunction = (feature) => {
@@ -53,11 +63,15 @@ const VHImap = ({ onCityClick }) => {
   return (
     <div>
       <MapContainer
-        center={[39.3999, -8.2245]}
-        zoom={6.5}
+        center={center}
+        zoom={zoom}
         style={{ height: "70vh", position: 'relative' }}
         dragging={true}
-        whenCreated={setMap}
+        whenCreated={(map) => {
+          setMap(map);
+          mapRef.current = map;
+        }}
+        fitBounds={true}
       >
         <GeoJSON
           data={concelhos.features}
